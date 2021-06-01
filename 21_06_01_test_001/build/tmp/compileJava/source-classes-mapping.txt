@@ -1,0 +1,2 @@
+com/telran/qa14/FirstSelenimTest.java
+ com.telran.qa14.FirstSelenimTest
