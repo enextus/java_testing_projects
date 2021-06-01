@@ -36,7 +36,8 @@ public class FirstSeleniumTest {
     @Test
     public void searchProductTest() {
         driver.findElement(By.name("search_query")).sendKeys("summer dresses" + Keys.ENTER);
-        String text = driver.findElement(By.className("lighter")).getText();
+        String text = driver.findElement(By.className("lighter"))
+                .getText();
 
         Assert.assertEquals(text, "\"SUMMER DRESSES\"");
     }
