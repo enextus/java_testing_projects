@@ -35,11 +35,14 @@ public class FirstSeleniumTest {
     //Test
     @Test
     public void searchProductTest() {
-        driver.findElement(By.name("search_query")).sendKeys("summer dresses" + Keys.ENTER);
+        driver.findElement(By.name("search_query"))
+                .sendKeys("summer dresses" + Keys.ENTER);
+
         String text = driver.findElement(By.className("lighter"))
                 .getText();
 
         Assert.assertEquals(text, "\"SUMMER DRESSES\"");
+
     }
 
     //after - tearDown()
