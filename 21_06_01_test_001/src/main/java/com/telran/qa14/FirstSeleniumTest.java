@@ -32,6 +32,19 @@ public class FirstSeleniumTest {
         System.out.println("site opened!");
     }*/
 
+/*    //Test
+    @Test
+    public void searchProductTest() {
+        driver.findElement(By.name("search_query"))
+                .sendKeys("summer dresses" + Keys.ENTER);
+
+        String text = driver.findElement(By.className("lighter"))
+                .getText();
+
+        Assert.assertEquals(text, "\"SUMMER DRESSES\"");
+
+    }*/
+
     //Test
     @Test
     public void searchProductTest() {
@@ -42,6 +55,8 @@ public class FirstSeleniumTest {
                 .getText();
 
         Assert.assertEquals(text, "\"SUMMER DRESSES\"");
+
+        driver.findElement(By.name("kkkkk"));
 
     }
 
