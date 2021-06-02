@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -27,5 +28,7 @@ public class NavMenuTest {
     @Test
     public void navMenuTest() {
         WebElement div = driver.findElement(By.xpath("//div[@id='block_top_menu']"));
+
+        div.findElement(By.xpath(".//*[@title='T-shirts']")).click();
     }
 }
