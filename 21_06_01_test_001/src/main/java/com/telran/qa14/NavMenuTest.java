@@ -29,7 +29,7 @@ public class NavMenuTest {
     public void navMenuTest() {
         WebElement div = driver.findElement(By.xpath("//div[@id='block_top_menu']"));
 
-        div.findElement(By.xpath(".//*[@title='T-shirts']")).click(); // find the menu element and click them
-
+        //div.findElement(By.xpath(".//*[@title='T-shirts']")).click(); // find the menu element and click them
+        driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[3]")).click();
     }
 }
