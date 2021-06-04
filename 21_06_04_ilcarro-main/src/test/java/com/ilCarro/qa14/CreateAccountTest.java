@@ -20,18 +20,20 @@ public class CreateAccountTest extends TestBase {
         Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
 
         String name = "#first_name";
-
         System.out.println(name);
         clickClear(name);
         driver.findElement(By.cssSelector("#first_name")).sendKeys("Re");
 
         name = "#second_name";
         clickClear(name);
-        driver.findElement(By.cssSelector("#second_name")).sendKeys("Re");
+        driver.findElement(By.cssSelector(name)).sendKeys("Re");
 
-        driver.findElement(By.cssSelector("#email")).click();
-        driver.findElement(By.cssSelector("#email")).clear();
-        driver.findElement(By.cssSelector("#email")).sendKeys("Re@co.co");
+        name = "#email";
+        clickClear(name);
+        driver.findElement(By.cssSelector(name)).sendKeys("Re@co.co");
+
+        name = "#email";
+        clickClear(name);
         driver.findElement(By.cssSelector("#password")).click();
         driver.findElement(By.cssSelector("#password")).clear();
         driver.findElement(By.cssSelector("#password")).sendKeys("87Re012394");
