@@ -45,13 +45,13 @@ public class NavMenuTest {
             System.out.println("Name " + i + ": " + name.getTagName() + ",  " + name.getText());
 
             driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]")).click();
-            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         }
 
     }
 
     //after - tearDown()
-    @AfterMethod(enabled = false)
+    @AfterMethod(enabled = true)
     public void tearDown() {
         driver.quit();
     }
