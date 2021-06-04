@@ -31,33 +31,16 @@ public class NavMenuTest {
 
         //div.findElement(By.xpath(".//*[@title='T-shirts']")).click(); // find the menu element and click them
 
-        //WebElement name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[1]/a"));
-
         WebElement name;
 
-/*        System.out.println("Name " + " 1: " + name.getTagName() + ",  " + name.getText());
-
-        driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[1]")).click();
-
-
-        name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[2]/a"));
-        System.out.println("Name " + " 1: " + name.getTagName() + ",  " + name.getText());
-        driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[2]")).click();
-
-        System.out.println("2");
-
-        name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[3]/a"));
-        System.out.println("Name " + " 1: " + name.getTagName() + ",  " + name.getText());
-        driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[3]")).click();
-        System.out.println("3");*/
-
-        // wit "for" implemented
-        for (int i = 0; i < 2; i++) {
-            name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[\" + i + \"]/a"));
+        for (int i = 1; i < 4; i++) {
+            name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]/a"));
             System.out.println(name);
             System.out.println("Name " + " " + (i + 1) + ": " + name.getTagName() + ",  " + name.getText());
 
-            driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[\" + i + \"]")).click();
+            driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]")).click();
+
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         }
 
     }
