@@ -36,7 +36,7 @@ public class NavMenuTest {
         for (int i = 1; i < 4; i++) {
             name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]/a"));
             System.out.println(name);
-            System.out.println("Name " + " " + (i + 1) + ": " + name.getTagName() + ",  " + name.getText());
+            System.out.println("Name " + " " + (i) + ": " + name.getTagName() + ",  " + name.getText());
 
             driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]")).click();
 
