@@ -28,15 +28,15 @@ public class NavMenuTest {
 
     @Test
     public void navMenuTest() {
-        WebElement name;
-        List<WebElement> names = driver.findElements(By.xpath("//*[@id='block_top_menu']/ul/li"));
-        int count = names.size();
+        WebElement element;
+        List<WebElement> elements = driver.findElements(By.xpath("//*[@id='block_top_menu']/ul/li/a"));
+        int count = elements.size();
 
         for (int i = 1; i < count + 1; i++) {
-            name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]/a"));
-            System.out.println("Name " + i + ": " + name.getTagName() + ",  " + name.getText());
+            element = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]/a"));
+            System.out.println("Number: " + i + "; " + "Menu name: " + "\"" + element.getText() + "\"");
 
-            name.click();
+            element.click();
         }
 
     }
