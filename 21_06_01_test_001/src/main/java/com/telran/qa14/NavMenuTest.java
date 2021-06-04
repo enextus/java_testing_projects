@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -22,7 +23,6 @@ public class NavMenuTest {
         driver.manage().window().maximize();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
     }
 
     @Test
@@ -32,4 +32,11 @@ public class NavMenuTest {
         //div.findElement(By.xpath(".//*[@title='T-shirts']")).click(); // find the menu element and click them
         driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[3]")).click();
     }
+
+    //after - tearDown()
+    @AfterMethod(enabled = false)
+    public void tearDown() {
+        driver.quit();
+    }
+
 }
