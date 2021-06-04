@@ -21,22 +21,18 @@ public class CreateAccountTest extends TestBase {
 
         String name = "#first_name";
         clickClear(name);
-        driver.findElement(By.cssSelector(name)).sendKeys("Re");
 
         name = "#second_name";
         clickClear(name);
-        driver.findElement(By.cssSelector(name)).sendKeys("Re");
 
         name = "#email";
         clickClear(name);
-        driver.findElement(By.cssSelector(name)).sendKeys("Re@co.co");
 
         name = "#email";
         clickClear(name);
 
         name = "#password";
         clickClear(name);
-        driver.findElement(By.cssSelector(name)).sendKeys("87Re012394");
 
         driver.findElement(By.cssSelector("#check_policy")).click();
 
@@ -45,6 +41,18 @@ public class CreateAccountTest extends TestBase {
     public void clickClear(String name) {
         driver.findElement(By.cssSelector(name)).click();
         driver.findElement(By.cssSelector(name)).clear();
+
+        String key;
+
+        if (name == "#email") {
+            key = "Re@co.com";
+        } else if (name == "#password") {
+            key = "87Re012394";
+        } else {
+            key = "Re";
+        }
+
+        driver.findElement(By.cssSelector(name)).sendKeys(key);
     }
     //click on SignUp Button
     //fill registration form
