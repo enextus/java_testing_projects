@@ -27,8 +27,7 @@ public class NavMenuTest {
 
     @Test
     public void navMenuTest() {
-        WebElement div = driver.findElement(By.xpath("//div[@id='block_top_menu']"));
-
+        // WebElement div = driver.findElement(By.xpath("//div[@id='block_top_menu']"));
         //div.findElement(By.xpath(".//*[@title='T-shirts']")).click(); // find the menu element and click them
 
         WebElement name;
@@ -36,10 +35,9 @@ public class NavMenuTest {
         for (int i = 1; i < 4; i++) {
             name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]/a"));
             System.out.println(name);
-            System.out.println("Name " + " " + (i) + ": " + name.getTagName() + ",  " + name.getText());
+            System.out.println("Name " + i + ": " + name.getTagName() + ",  " + name.getText());
 
             driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]")).click();
-
             driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         }
 
