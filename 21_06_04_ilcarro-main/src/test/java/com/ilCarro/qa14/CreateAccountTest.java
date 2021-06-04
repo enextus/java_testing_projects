@@ -15,11 +15,15 @@ public class CreateAccountTest extends TestBase {
     }
 
     @Test
+    public void clickClear() {
+        driver.findElement(By.cssSelector("#first_name")).click();
+        driver.findElement(By.cssSelector("#first_name")).clear();
+    }
+
     public void signUpTest() {
         driver.findElement(By.cssSelector("[href='/signup']")).click();
         Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
-        driver.findElement(By.cssSelector("#first_name")).click();
-        driver.findElement(By.cssSelector("#first_name")).clear();
+        clickClear();
         driver.findElement(By.cssSelector("#first_name")).sendKeys("Re");
         driver.findElement(By.cssSelector("#second_name")).click();
         driver.findElement(By.cssSelector("#second_name")).clear();
