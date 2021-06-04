@@ -56,7 +56,7 @@ public class FirstSeleniumTest {
 
         Assert.assertEquals(text, "\"SUMMER DRESSES\"");
 
-        driver.findElement(By.name("kkkkk"));
+        //driver.findElement(By.name("kkkkk"));
 
     }
 
