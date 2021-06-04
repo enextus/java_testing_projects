@@ -11,24 +11,24 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-    WebDriver wd;
+    WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
         //System.setProperty("webdriver.chrome.driver","path/chromedriver.exe");
-        wd = new ChromeDriver();
-        wd.get("https://ilcarro-dev-v1.firebaseapp.com/");
-        wd.manage().window().maximize();
-        wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver = new ChromeDriver();
+        driver.get("https://ilcarro-dev-v1.firebaseapp.com/");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
     public boolean isFindCarFormPresent(By by) {
-        return wd.findElements(by).size()>0;
+        return driver.findElements(by).size()>0;
     }
 
     public boolean isElementPresent(By locator) {
         try{
-            wd.findElement(locator);
+            driver.findElement(locator);
             return true;
         }catch (NoSuchElementException ex){
             return false;
@@ -37,6 +37,6 @@ public class TestBase {
 
     @AfterMethod(enabled = false)
     public void tearDown() {
-        wd.quit();
+        driver.quit();
     }
 }
