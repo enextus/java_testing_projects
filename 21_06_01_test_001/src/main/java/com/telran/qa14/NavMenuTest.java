@@ -28,9 +28,6 @@ public class NavMenuTest {
 
     @Test
     public void navMenuTest() {
-/*        WebElement div = driver.findElement(By.xpath("//div[@id='block_top_menu']"));
-        div.findElement(By.xpath(".//*[@title='T-shirts']")).click(); // find the menu element and click them*/
-
         WebElement name;
         List<WebElement> names = driver.findElements(By.xpath("//*[@id='block_top_menu']/ul/li"));
         int count = names.size();
@@ -51,3 +48,6 @@ public class NavMenuTest {
     }
 
 }
+
+/*        WebElement div = driver.findElement(By.xpath("//div[@id='block_top_menu']"));
+        div.findElement(By.xpath(".//*[@title='T-shirts']")).click(); // find the menu element and click them*/
