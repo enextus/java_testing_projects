@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class NavMenuTest {
@@ -32,8 +33,17 @@ public class NavMenuTest {
 
         WebElement name;
 
-        for (int i = 1; i < 4; i++) {
+        List names;
+
+
+        names = driver.findElements(By.xpath("//*[@id='block_top_menu']/ul/li"));
+        int count = names.size();
+
+        for (int i = 1; i < count + 1; i++) {
+            // names = driver.findElements(By)
+
             name = driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]/a"));
+
             System.out.println(name + "Name " + i + ": " + name.getTagName() + ",  " + name.getText());
 
             driver.findElement(By.xpath("//*[@id='block_top_menu']/ul/li[" + i + "]")).click();
