@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CreateAccountTest extends TestBase {
@@ -22,34 +23,9 @@ public class CreateAccountTest extends TestBase {
         driver.findElement(By.cssSelector("[href='/signup']")).click();
         Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
 
-/*        String name = "#first_name";
-        clickClear(name);
-
-        name = "#second_name";
-        clickClear(name);
-
-        name = "#email";
-        clickClear(name);
-
-        name = "#password";
-        clickClear(name);*/
-
-
-        ArrayList<String> arlist = new ArrayList<String>();
-        arlist.add("#first_name");
-        arlist.add("#second_name");
-        arlist.add("#email");
-        arlist.add("#password");
-
-        for (String element :
-                arlist) {
-            clickClear(element);
-        }
-
+        ArrayList<String> arlist = new ArrayList<String>(Arrays.asList("#first_name", "#second_name", "#email", "#password"));
+        for (String element : arlist) clickClear(element);
         driver.findElement(By.cssSelector("#check_policy")).click();
-
-
-
     }
 
     public void clickClear(String name) {
