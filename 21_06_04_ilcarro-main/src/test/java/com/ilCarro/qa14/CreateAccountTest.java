@@ -5,6 +5,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CreateAccountTest extends TestBase {
     //preconditions: user should be logged out
     @BeforeMethod
@@ -19,7 +22,7 @@ public class CreateAccountTest extends TestBase {
         driver.findElement(By.cssSelector("[href='/signup']")).click();
         Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
 
-        String name = "#first_name";
+/*        String name = "#first_name";
         clickClear(name);
 
         name = "#second_name";
@@ -28,13 +31,24 @@ public class CreateAccountTest extends TestBase {
         name = "#email";
         clickClear(name);
 
-        name = "#email";
-        clickClear(name);
-
         name = "#password";
-        clickClear(name);
+        clickClear(name);*/
+
+
+        ArrayList<String> arlist = new ArrayList<String>();
+        arlist.add("#first_name");
+        arlist.add("#second_name");
+        arlist.add("#email");
+        arlist.add("#password");
+
+        for (String element :
+                arlist) {
+            clickClear(element);
+        }
 
         driver.findElement(By.cssSelector("#check_policy")).click();
+
+
 
     }
 
