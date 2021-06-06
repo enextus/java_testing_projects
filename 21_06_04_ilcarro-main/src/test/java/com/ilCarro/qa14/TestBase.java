@@ -23,20 +23,23 @@ public class TestBase {
     }
 
     public boolean isFindCarFormPresent(By by) {
-        return driver.findElements(by).size()>0;
+        return driver.findElements(by).size() > 0;
     }
 
     public boolean isElementPresent(By locator) {
-        try{
+        try {
             driver.findElement(locator);
             return true;
-        }catch (NoSuchElementException ex){
+        } catch (NoSuchElementException ex) {
             return false;
         }
     }
 
     @AfterMethod(enabled = true)
+
+
     public void tearDown() {
+        System.out.println("Driver: " + driver.getTitle());
         driver.quit();
     }
 
