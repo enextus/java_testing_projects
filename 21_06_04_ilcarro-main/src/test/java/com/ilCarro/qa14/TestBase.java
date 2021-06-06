@@ -36,8 +36,6 @@ public class TestBase {
     }
 
     @AfterMethod(enabled = true)
-
-
     public void tearDown() {
         System.out.println("Driver: " + driver.getTitle());
         driver.quit();
