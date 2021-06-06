@@ -8,6 +8,12 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+    //click on SignUp Button
+    //fill registration form
+    //click Submit button
+    //check login form displayed
+ */
 public class CreateAccountTest extends TestBase {
     //preconditions: user should be logged out
     @BeforeMethod
@@ -43,8 +49,5 @@ public class CreateAccountTest extends TestBase {
 
         driver.findElement(By.cssSelector(name)).sendKeys(key);
     }
-    //click on SignUp Button
-    //fill registration form
-    //click Submit button
-    //check login form displayed
+
 }
