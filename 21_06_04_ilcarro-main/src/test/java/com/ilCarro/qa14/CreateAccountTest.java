@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class CreateAccountTest extends TestBase {
     //preconditions: user should be logged out
@@ -23,8 +22,8 @@ public class CreateAccountTest extends TestBase {
         driver.findElement(By.cssSelector("[href='/signup']")).click();
         Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
 
-        ArrayList<String> arlist = new ArrayList<String>(Arrays.asList("#first_name", "#second_name", "#email", "#password"));
-        for (String element : arlist) clickClear(element);
+        ArrayList<String> arList = new ArrayList<String>(Arrays.asList("#first_name", "#second_name", "#email", "#password"));
+        for (String element : arList) clickClear(element);
         driver.findElement(By.cssSelector("#check_policy")).click();
     }
 
