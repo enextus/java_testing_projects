@@ -17,10 +17,10 @@ public class TestBase {
 
     @BeforeMethod
     public void setUp() {
-        //System.setProperty("webdriver.chrome.driver","path/chromedriver.exe");
-        //driver = new ChromeDriver();
-        WebDriver driver = new FirefoxDriver();
+        driver = new ChromeDriver();
+
         driver.get("https://ilcarro-dev-v1.firebaseapp.com/");
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
