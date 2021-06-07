@@ -43,6 +43,9 @@ class findTermsOfTabTest {
         Assert.assertTrue(isElementPresent(By.cssSelector(".search-sidebar__content")));
     }
 
+    private boolean isElementPresent(By cssSelector) {
+    }
+
     @Test
     public void findSearchTest() {
 
