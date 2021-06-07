@@ -3,8 +3,12 @@ package com.ilCarro.qa14;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.*;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.*;
+
+import org.junit.Test;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -19,7 +23,7 @@ public class TestBase {
     public void setUp() {
         //System.setProperty("webdriver.chrome.driver","path/chromedriver.exe");
         //driver = new ChromeDriver();
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://ilcarro-dev-v1.firebaseapp.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
