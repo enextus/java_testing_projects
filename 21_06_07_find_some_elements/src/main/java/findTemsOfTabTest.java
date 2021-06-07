@@ -1,14 +1,12 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import org.testng.Assert;
 import java.util.concurrent.TimeUnit;
 
 class findTermsOfTabTest {
@@ -42,7 +40,7 @@ class findTermsOfTabTest {
         wd.findElement(By.xpath("//ul[@class='header__nav desktop']/li[3]")).click();
 
         //Assert.assertTrue(isElementPresent(By.xpath("//div[contains(.,'Terms')]")));
-        Assert.assertTrue(isElementPresent)
+        Assert.assertTrue(isElementPresent(By.cssSelector(".search-sidebar__content")));
     }
 
     @Test
