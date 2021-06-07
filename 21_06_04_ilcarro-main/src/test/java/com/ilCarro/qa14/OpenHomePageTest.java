@@ -7,11 +7,10 @@ public class OpenHomePageTest extends TestBase{
 
     @Test
     public void homePageTest() {
-        System.out.println("FindCarForm: "
-                           + isElementPresent(By.cssSelector(".Main_mainpage__find_your_car__AHLkw"))
-                           + ", Element name: "
-                           + driver.findElement( By.cssSelector(".Main_mainpage__find_your_car__AHLkw")).getTagName()
-                           + ";");
+        System.out.println("FindCarForm: " + isElementPresent(By.cssSelector(".Main_mainpage__find_your_car__AHLkw"))
+                + ", Element name: "
+                + driver.findElement(By.cssSelector(".Main_mainpage__find_your_car__AHLkw")).getTagName()
+                + ";");
     }
 
 }
