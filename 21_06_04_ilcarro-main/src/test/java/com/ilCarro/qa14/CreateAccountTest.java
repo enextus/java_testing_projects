@@ -23,16 +23,6 @@ public class CreateAccountTest extends TestBase {
         }
     }
 
-    @Test
-    public void signUpTest() {
-        driver.findElement(By.cssSelector("[href='/signup']")).click();
-        Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
-
-        ArrayList<String> arList = new ArrayList<String>(Arrays.asList("#first_name", "#second_name", "#email", "#password"));
-        for (String element : arList) clickClear(element);
-        driver.findElement(By.cssSelector("#check_policy")).click();
-    }
-
     public void clickClear(String name) {
         driver.findElement(By.cssSelector(name)).click();
         driver.findElement(By.cssSelector(name)).clear();
@@ -48,6 +38,16 @@ public class CreateAccountTest extends TestBase {
         }
 
         driver.findElement(By.cssSelector(name)).sendKeys(key);
+    }
+
+    @Test
+    public void signUpTest() {
+        driver.findElement(By.cssSelector("[href='/signup']")).click();
+        Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
+
+        ArrayList<String> arList = new ArrayList<String>(Arrays.asList("#first_name", "#second_name", "#email", "#password"));
+        for (String element : arList) clickClear(element);
+        driver.findElement(By.cssSelector("#check_policy")).click();
     }
 
 }
