@@ -23,7 +23,6 @@ public class FirstSeleniumTest {
         driver.get("http://automationpractice.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
     }
 
 /*    //Test
@@ -45,7 +44,6 @@ public class FirstSeleniumTest {
 
     }*/
 
-    //Test
     @Test
     public void searchProductTest() {
         driver.findElement(By.name("search_query"))
