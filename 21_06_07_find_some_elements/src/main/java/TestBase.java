@@ -1,26 +1,11 @@
-package com.ilCarro.qa14;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.*;
-
-import org.openqa.selenium.chrome.*;
-
-import org.junit.Test;
-
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
     WebDriver driver;
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp(){
         //System.setProperty("webdriver.chrome.driver","path/chromedriver.exe");
         //driver = new ChromeDriver();
         WebDriver driver = new ChromeDriver();
