@@ -1,3 +1,5 @@
+package com.ilCarro.qa14;
+
 public class User {
     private String firstName;
     private String secondName;
