@@ -36,25 +36,22 @@ class findTermsOfTabTest {
 
     @Test
     public void findTermsOfUseTabTest() throws InterruptedException {
-
         WebElement wd = driver.findElement(By.name("address"));
 
-/*        searchBox.sendKeys("ChromeDriver");
+/*      searchBox.sendKeys("ChromeDriver");
         searchBox.submit();*/
-//
-        wd.findElement(By.xpath("//ul[@class='header__nav desktop']/li[3]")).click();
 
+        wd.findElement(By.xpath("//ul[@class='header__nav desktop']/li[3]")).click();
         Assert.assertTrue(isElementPresent(By.xpath("//div[contains(.,'Terms')]")));
         //Assert.assertTrue(isElementPresent(By.cssSelector(".search-sidebar__content")));
     }
 
-
-/*    @Test
+    @Test
     public void findSearchTest() {
         driver.findElement(By.xpath("//ul[@class='header__nav desktop']/li[1]")).click();
         System.out.println(driver);
         Assert.assertTrue(isElementPresent(By.cssSelector(".search-sidebar__content")));
-    }*/
+    }
 
     @AfterMethod(enabled = true)
     public void tearDown() {
