@@ -1,4 +1,6 @@
+package com.ilCarro.qa14;
 
+import com.ilCarro.qa14.TestBase;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
