@@ -7,34 +7,34 @@ public class LoginTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (!isSignUpButtonPresent()) {
-            logout();
+        if (!app.isSignUpButtonPresent()) {
+            app.logout();
         }
     }
 
     @Test
     public void loginRegisteredUserPositiveTest() {
 
-        clickOnLoginTab();
+        app.clickOnLoginTab();
 
-        fillLoginForm(new User().withEmail("hummels@gmail.com")
+        app.fillLoginForm(new User().withEmail("hummels@gmail.com")
                 .withPassword("Hummels098765"));
 
-        submit();
+        app.submit();
 
-        isLogoutTabPresent();
+        app.isLogoutTabPresent();
 
     }
 
     @Test
     public void loginRegisteredUserWithWrongPasswordNegativeTest() {
 
-        clickOnLoginTab();
+        app.clickOnLoginTab();
 
-        fillLoginForm(new User().withEmail("hummels@gmail.com")
+        app.fillLoginForm(new User().withEmail("hummels@gmail.com")
                 .withPassword("hummels098765"));
 
-        submit();
+        app.submit();
 
     }
 

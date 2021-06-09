@@ -7,17 +7,17 @@ public class CreateCarTest extends TestBase{
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (!isUserLoggedIn()){
-            logIn();
+        if (!app.isUserLoggedIn()){
+            app.logIn();
         }
     }
 
     @Test
     public void addCarTest() throws InterruptedException {
-        pause();
-        clickOnAddCarTab();
+        app.pause();
+        app.clickOnAddCarTab();
 
-        fillCarForm(new Car()
+        app.fillCarForm(new Car()
                 .setCountry("Germany")
                 .setAddress("Friedrichstrasse")
                 .setDistance("1000"));
