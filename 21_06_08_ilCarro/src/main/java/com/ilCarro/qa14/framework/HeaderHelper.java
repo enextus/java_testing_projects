@@ -21,4 +21,5 @@ public class HeaderHelper extends HelperBase{
         click(By.xpath("//ul[@class='header__nav desktop']/li[1]"));
         Assert.assertTrue(isElementPresent1(By.cssSelector(".search-sidebar__content")));
     }
+
 }

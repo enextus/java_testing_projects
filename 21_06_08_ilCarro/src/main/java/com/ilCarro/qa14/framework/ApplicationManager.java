@@ -49,8 +49,4 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public void jumpToFooter() {
-        wd.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END);
-    }
-
 }
