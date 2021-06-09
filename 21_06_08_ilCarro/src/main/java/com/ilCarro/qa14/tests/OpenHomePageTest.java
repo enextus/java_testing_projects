@@ -7,7 +7,7 @@ public class OpenHomePageTest extends TestBase {
 
     @Test
     public void homePageTest() {
-        System.out.println("FindCarForm: " + app.car.isFindCarFormPresent());
+        System.out.println("FindCarForm: " + app.getCar().isFindCarFormPresent());
     }
 
 }

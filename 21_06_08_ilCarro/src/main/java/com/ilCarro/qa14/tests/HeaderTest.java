@@ -7,7 +7,7 @@ public class HeaderTest extends TestBase {
 
     @Test
     public void findSearchTest() {
-        app.header.checkSearchPageLaunch();
+        app.getHeader().checkSearchPageLaunch();
     }
 
 }
