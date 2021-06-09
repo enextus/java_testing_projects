@@ -7,25 +7,25 @@ public class CreateAccountTest extends TestBase {
 
     @BeforeMethod
     public void ensurePrecondition() {
-        if (!app.isSignUpButtonPresent()) {
-            app.logout();
+        if (!app.user.isSignUpButtonPresent()) {
+            app.user.logout();
         }
     }
 
     @Test
     public void signUpTest() {
-        app.clickOnSignUpTab();
-        app.isSignUpFormPresent();
+        app.header.clickOnSignUpTab();
+        app.user.isSignUpFormPresent();
 
-        app.fillRegistrationForm(new User()
+        app.user.fillRegistrationForm(new User()
                 .withFirstName("Mats")
                 .withSecondName("Hummels")
                 .withEmail("hummels3@gmail.com")
                 .withPassword("Hummels098765"));
 
-        app.clickCheckPolicy();
-        app.submit();
-        app.isLogInFormPresent();
+        app.user.clickCheckPolicy();
+        app.user.submit();
+        app.user.isLogInFormPresent();
 
     }
 
