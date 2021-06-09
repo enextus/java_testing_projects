@@ -24,7 +24,7 @@ public class TestBase {
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterMethod(enabled = false)
+    @AfterMethod(enabled = true)
     public void tearDown() {
         wd.quit();
     }
