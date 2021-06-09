@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class FooterTest extends TestBase {
 
     @Test
-    public void findSearchTest() {
+    public void jumpToFooterTest() {
         app.getFooter().jumpToFooter();
     }
 
