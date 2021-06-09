@@ -47,7 +47,7 @@ public class UserHelper extends HelperBase{
     }
 
     public void isLogInFormPresent() {
-        Assert.assertTrue(isElementPresent(By.cssSelector(".Login_login__right_block__1niYm")));
+        Assert.assertTrue(isElementPresentTwo(By.cssSelector(".Login_login__right_block__1niYm")));
     }
 
     public void clickCheckPolicy() {

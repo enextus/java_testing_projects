@@ -10,7 +10,7 @@ public class CarHelper extends HelperBase{
     }
 
     public boolean isFindCarFormPresent() {
-        return isElementPresent1(By
+        return isElementPresentTwo(By
                 .cssSelector(".Main_mainpage__find_your_car__AHLkw"));
     }
 
