@@ -12,4 +12,5 @@ public class FooterHelper extends HelperBase{
     public void jumpToFooter() {
         wd.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END);
     }
+
 }
