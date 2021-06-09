@@ -8,6 +8,10 @@ public class UserHelper extends HelperBase{
         click(By.xpath("//a[contains(.,'logOut')]"));
     }
 
+    public void clickOnLoginTab() {
+        click(By.xpath("//ul[@class='header__nav desktop']/li[5]"));
+    }
+
     public boolean isSignUpButtonPresent() {
         return isElementPresent(By.cssSelector("[href='/signup']"));
     }

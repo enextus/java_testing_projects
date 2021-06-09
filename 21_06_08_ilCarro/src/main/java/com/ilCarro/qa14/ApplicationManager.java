@@ -8,7 +8,7 @@ import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager{
+public class ApplicationManager extends CarHelper{
 
     WebDriver wd;
 
@@ -35,10 +35,6 @@ public class ApplicationManager{
     public boolean isFindCarFormPresent() {
         return isElementPresent1(By
                 .cssSelector(".Main_mainpage__find_your_car__AHLkw"));
-    }
-
-    public void clickOnLoginTab() {
-        click(By.xpath("//ul[@class='header__nav desktop']/li[5]"));
     }
 
     public void clickOnAddCarTab() {
