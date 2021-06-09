@@ -4,6 +4,12 @@ public class Car {
     private String country;
     private String address;
     private String distance;
+    private String win;
+
+
+    public void setWin(String win) {
+        this.win = win;
+    }
 
     public Car setCountry(String country) {
         this.country = country;
@@ -30,6 +36,10 @@ public class Car {
 
     public String getDistance() {
         return distance;
+    }
+
+    public String getWin() {
+        return win;
     }
 
 }
