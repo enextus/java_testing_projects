@@ -1,9 +1,11 @@
-package com.ilCarro.qa14;
+package com.ilCarro.qa14.tests;
 
+import com.ilCarro.qa14.models.Car;
+import com.ilCarro.qa14.framework.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class CreateCarTest extends TestBase{
+public class CreateCarTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {

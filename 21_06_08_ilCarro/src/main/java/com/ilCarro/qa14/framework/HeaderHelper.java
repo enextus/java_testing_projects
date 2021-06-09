@@ -1,9 +1,14 @@
-package com.ilCarro.qa14;
+package com.ilCarro.qa14.framework;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class HeaderHelper extends HelperBase{
+    public HeaderHelper(WebDriver wd) {
+        super(wd);
+    }
+
     public void isLogoutTabPresent() {
         Assert.assertTrue(isElementPresent(By.xpath("//a[contains(.,'logOut')]")));
     }

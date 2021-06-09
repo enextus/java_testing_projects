@@ -1,9 +1,15 @@
-package com.ilCarro.qa14;
+package com.ilCarro.qa14.framework;
 
+import com.ilCarro.qa14.models.User;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class UserHelper extends HelperBase{
+    public UserHelper(WebDriver wd) {
+        super(wd);
+    }
+
     public void logout() {
         click(By.xpath("//a[contains(.,'logOut')]"));
     }

@@ -1,5 +1,7 @@
-package com.ilCarro.qa14;
+package com.ilCarro.qa14.tests;
 
+import com.ilCarro.qa14.framework.TestBase;
+import com.ilCarro.qa14.models.User;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

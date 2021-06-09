@@ -1,4 +1,4 @@
-package com.ilCarro.qa14;
+package com.ilCarro.qa14.framework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -23,10 +23,10 @@ public class ApplicationManager {
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        user = new UserHelper();
-        car = new CarHelper();
-        header = new HeaderHelper();
-        footer = new FooterHelper();
+        user = new UserHelper(wd);
+        car = new CarHelper(wd);
+        header = new HeaderHelper(wd);
+        footer = new FooterHelper(wd);
     }
 
     public UserHelper getUser() {

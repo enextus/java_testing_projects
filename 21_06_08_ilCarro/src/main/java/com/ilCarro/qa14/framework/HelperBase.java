@@ -1,4 +1,4 @@
-package com.ilCarro.qa14;
+package com.ilCarro.qa14.framework;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,11 @@ import java.util.NoSuchElementException;
 
 public class HelperBase {
 
-    WebDriver wd;
+    public WebDriver wd;
+
+    public HelperBase(WebDriver wd) {
+        this.wd = wd;
+    }
 
     public boolean isElementPresent(By by) {
         return wd.findElements(by).size() > 0;
