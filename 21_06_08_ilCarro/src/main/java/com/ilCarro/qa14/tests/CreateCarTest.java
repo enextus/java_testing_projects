@@ -1,7 +1,7 @@
 package com.ilCarro.qa14.tests;
 
-import com.ilCarro.qa14.models.Car;
 import com.ilCarro.qa14.framework.TestBase;
+import com.ilCarro.qa14.models.Car;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,6 +23,7 @@ public class CreateCarTest extends TestBase {
                 .setAddress("Friedrichstrasse")
                 .setDistance("1000")
                 .setVin("2C3KA43R26H462902")
+                .setBrand("Volvo")
         );
     }
 

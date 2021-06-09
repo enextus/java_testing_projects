@@ -5,13 +5,15 @@ public class Car {
     private String address;
     private String distance;
     private String vin;
+    private String brand;
 
-    // setters
-    public Car setVin(String vin) {
-        this.vin = vin;
+
+    public Car setBrand(String brand) {
+        this.brand = brand;
         return this;
     }
 
+    // setters
     public Car setCountry(String country) {
         this.country = country;
         return this;
@@ -24,6 +26,11 @@ public class Car {
 
     public Car setDistance(String distance) {
         this.distance = distance;
+        return this;
+    }
+
+    public Car setVin(String vin) {
+        this.vin = vin;
         return this;
     }
 
@@ -42,6 +49,10 @@ public class Car {
 
     public String getVin() {
         return vin;
+    }
+
+    public String getBrand() {
+        return brand;
     }
 
 }
