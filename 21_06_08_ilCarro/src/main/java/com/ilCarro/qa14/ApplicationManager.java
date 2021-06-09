@@ -10,9 +10,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager{
 
-    WebDriver wd;
+    public WebDriver wd;
 
-    protected void init() {
+    public void init() {
         //System.setProperty("webdriver.chrome.driver","path/chromedriver.exe");
         wd = new ChromeDriver();
         wd.get("https://ilcarro-dev-v1.firebaseapp.com/");
@@ -20,7 +20,7 @@ public class ApplicationManager{
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    protected void stop() {
+    public void stop() {
         wd.quit();
     }
 
