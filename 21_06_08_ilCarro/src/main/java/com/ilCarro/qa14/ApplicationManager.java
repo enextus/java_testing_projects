@@ -4,13 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager{
+public class ApplicationManager {
 
     public WebDriver wd;
+
+    UserHelper user;
+    CarHelper car;
+    HeaderHelper header;
+    FooterHelper footer;
 
     public void init() {
         //System.setProperty("webdriver.chrome.driver","path/chromedriver.exe");
@@ -18,6 +22,27 @@ public class ApplicationManager{
         wd.get("https://ilcarro-dev-v1.firebaseapp.com/");
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        user = new UserHelper();
+        car = new CarHelper();
+        header = new HeaderHelper();
+        footer = new FooterHelper();
+    }
+
+    public UserHelper getUser() {
+        return user;
+    }
+
+    public CarHelper getCar() {
+        return car;
+    }
+
+    public HeaderHelper getHeader() {
+        return header;
+    }
+
+    public FooterHelper getFooter() {
+        return footer;
     }
 
     public void stop() {
