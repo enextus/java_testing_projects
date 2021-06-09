@@ -18,12 +18,10 @@ public class CreateCarTest extends TestBase {
     public void addCarTest() throws InterruptedException {
         app.getUser().pause();
         app.getCar().clickOnAddCarTab();
-
         app.getCar().fillCarForm(new Car()
                 .setCountry("Germany")
                 .setAddress("Friedrichstrasse")
                 .setDistance("1000"));
-
     }
 
 }

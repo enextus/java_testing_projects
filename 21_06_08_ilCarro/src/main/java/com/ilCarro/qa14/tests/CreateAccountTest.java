@@ -18,17 +18,14 @@ public class CreateAccountTest extends TestBase {
     public void signUpTest() {
         app.getHeader().clickOnSignUpTab();
         app.getUser().isSignUpFormPresent();
-
         app.getUser().fillRegistrationForm(new User()
                 .withFirstName("Mats")
                 .withSecondName("Hummels")
                 .withEmail("hummels3@gmail.com")
                 .withPassword("Hummels098765"));
-
         app.getUser().clickCheckPolicy();
         app.getUser().submit();
         app.getUser().isLogInFormPresent();
-
     }
 
 }

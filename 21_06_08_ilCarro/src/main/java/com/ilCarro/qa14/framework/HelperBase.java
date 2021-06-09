@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 public class HelperBase {
 
-    public WebDriver wd;
+    WebDriver wd;
 
     public HelperBase(WebDriver wd) {
         this.wd = wd;
