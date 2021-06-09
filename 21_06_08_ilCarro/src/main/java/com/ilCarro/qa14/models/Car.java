@@ -6,9 +6,10 @@ public class Car {
     private String distance;
     private String win;
 
-
-    public void setWin(String win) {
+    // setters
+    public Car setWin(String win) {
         this.win = win;
+        return this;
     }
 
     public Car setCountry(String country) {
@@ -26,6 +27,7 @@ public class Car {
         return this;
     }
 
+    // getters
     public String getCountry() {
         return country;
     }

@@ -21,7 +21,9 @@ public class CreateCarTest extends TestBase {
         app.getCar().fillCarForm(new Car()
                 .setCountry("Germany")
                 .setAddress("Friedrichstrasse")
-                .setDistance("1000"));
+                .setDistance("1000")
+                .setWin("1000")
+        );
     }
 
 }
