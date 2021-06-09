@@ -36,7 +36,7 @@ public class TestBase {
         }
     }
 
-    @AfterMethod(enabled = false)
+    @AfterMethod(enabled = true)
     public void tearDown() {
         wd.quit();
     }
@@ -74,4 +74,5 @@ public class TestBase {
     public void jumpToFooter() {
         wd.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL,Keys.END);
     }
+
 }
