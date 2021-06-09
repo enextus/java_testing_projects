@@ -22,7 +22,7 @@ public class CreateCarTest extends TestBase {
                 .setCountry("Germany")
                 .setAddress("Friedrichstrasse")
                 .setDistance("1000")
-                .setVin("2C3KA43R26H462902")
+                .setVin("KA4-R2-902")
                 .setBrand("Volvo")
         );
     }
