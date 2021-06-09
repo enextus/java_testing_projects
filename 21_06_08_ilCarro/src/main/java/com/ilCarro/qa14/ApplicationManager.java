@@ -6,12 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager {
+public class ApplicationManager{
 
-    static WebDriver wd;
+    WebDriver wd;
 
     protected void init() {
         //System.setProperty("webdriver.chrome.driver","path/chromedriver.exe");
@@ -23,47 +22,6 @@ public class ApplicationManager {
 
     protected void stop() {
         wd.quit();
-    }
-
-    public boolean isElementPresent(By by) {
-        return wd.findElements(by).size() > 0;
-    }
-
-    public boolean isElementPresent1(By locator) {
-        try {
-            wd.findElement(locator);
-            return true;
-        } catch (NoSuchElementException ex) {
-            return false;
-        }
-    }
-
-    public void logout() {
-        click(By.xpath("//a[contains(.,'logOut')]"));
-    }
-
-    public boolean isSignUpButtonPresent() {
-        return isElementPresent(By.cssSelector("[href='/signup']"));
-    }
-
-    public void isSignUpFormPresent() {
-        Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
-    }
-
-    public void type(By locator, String text) {
-        if (text!=null) {
-            click(locator);
-            wd.findElement(locator).clear();
-            wd.findElement(locator).sendKeys(text);
-        }
-    }
-
-    public void click(By locator) {
-        wd.findElement(locator).click();
-    }
-
-    public void submit() {
-        click(By.cssSelector("[type='submit']"));
     }
 
     public void isLogoutTabPresent() {
@@ -83,26 +41,6 @@ public class ApplicationManager {
         click(By.xpath("//ul[@class='header__nav desktop']/li[5]"));
     }
 
-    public void fillLoginForm(User user) {
-        type(By.cssSelector("[name='email']"), user.getEmail());
-        type(By.name("password"), user.getPassword());
-    }
-
-    public void logIn() {
-        clickOnLoginTab();
-        type(By.cssSelector("[name='email']"),"hummels@gmail.com");
-        type(By.name("password"),"Hummels098765");
-        submit();
-    }
-
-    public boolean isUserLoggedIn() {
-        return isElementPresent(By.xpath("//a[contains(.,'logOut')]"));
-    }
-
-    public void pause() throws InterruptedException {
-        Thread.sleep(2000);
-    }
-
     public void clickOnAddCarTab() {
         click(By.xpath("//ul[@class='header__nav desktop']/li[2]"));
     }
@@ -113,23 +51,8 @@ public class ApplicationManager {
         type(By.cssSelector(".distance_included"), car.getDistance());
     }
 
-    public void isLogInFormPresent() {
-        Assert.assertTrue(isElementPresent(By.cssSelector(".login_login__right_block__1niYm")));
-    }
-
-    public void clickCheckPolicy() {
-        click(By.cssSelector("#check_policy"));
-    }
-
     public void clickOnSignUpTab() {
         click(By.cssSelector("[href='/signup']"));
-    }
-
-    public void fillRegistrationForm(User user) {
-        type(By.cssSelector("#first_name"), user.getFirstName());
-        type(By.cssSelector("#second_name"), user.getSecondName());
-        type(By.cssSelector("#email"), user.getEmail());
-        type(By.cssSelector("#password"), user.getPassword());
     }
 
     public void checkSearchPageLaunch() {
