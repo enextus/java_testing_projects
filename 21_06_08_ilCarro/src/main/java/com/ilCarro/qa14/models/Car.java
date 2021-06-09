@@ -6,12 +6,7 @@ public class Car {
     private String distance;
     private String vin;
     private String brand;
-
-
-    public Car setBrand(String brand) {
-        this.brand = brand;
-        return this;
-    }
+    private String model;
 
     // setters
     public Car setCountry(String country) {
@@ -34,6 +29,16 @@ public class Car {
         return this;
     }
 
+    public Car setBrand(String brand) {
+        this.brand = brand;
+        return this;
+    }
+
+    public Car setModel(String model) {
+        this.model = model;
+        return this;
+    }
+
     // getters
     public String getCountry() {
         return country;
@@ -53,6 +58,10 @@ public class Car {
 
     public String getBrand() {
         return brand;
+    }
+
+    public String getModel() {
+        return model;
     }
 
 }

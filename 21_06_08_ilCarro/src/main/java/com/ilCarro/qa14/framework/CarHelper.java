@@ -24,6 +24,7 @@ public class CarHelper extends HelperBase{
         type(By.cssSelector(".distance_included"), car.getDistance());
         type(By.cssSelector(".serial_number"), car.getVin());
         type(By.cssSelector(".brand"), car.getBrand());
+        type(By.cssSelector(".model"), car.getModel());
     }
 
 }
