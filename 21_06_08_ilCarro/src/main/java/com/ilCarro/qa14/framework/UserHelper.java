@@ -47,10 +47,9 @@ public class UserHelper extends HelperBase{
     }
 
     public void isLogInFormPresent() {
-        Assert.assertTrue(isElementPresent(By.xpath("//*[@id='root']/div/div[1]/div/div[2]")));
+        Assert.assertTrue(isElementPresentTwo(By.xpath("//*[@id='root']/div/div[1]/div/div[2]")));
         // Assert.assertTrue(isElementPresent(By.cssSelector(".Login_login__right_block__1niYm")));
 
-        // click(By.xpath("//ul[@class='header__nav desktop']/li[1]"));
         // #root > div > div:nth-child(2) > div > div.Login_login__right_block__1niYm
         // //*[@id="root"]/div/div[1]/div/div[2]
     }
