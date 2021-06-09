@@ -4,11 +4,11 @@ public class Car {
     private String country;
     private String address;
     private String distance;
-    private String win;
+    private String vin;
 
     // setters
-    public Car setWin(String win) {
-        this.win = win;
+    public Car setVin(String vin) {
+        this.vin = vin;
         return this;
     }
 
@@ -40,8 +40,8 @@ public class Car {
         return distance;
     }
 
-    public String getWin() {
-        return win;
+    public String getVin() {
+        return vin;
     }
 
 }

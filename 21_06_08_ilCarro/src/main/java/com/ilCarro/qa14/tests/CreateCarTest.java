@@ -22,7 +22,7 @@ public class CreateCarTest extends TestBase {
                 .setCountry("Germany")
                 .setAddress("Friedrichstrasse")
                 .setDistance("1000")
-                .setWin("1000")
+                .setVin("2C3KA43R26H462902")
         );
     }
 
