@@ -24,6 +24,7 @@ public class CreateCarTest extends TestBase {
                 .setDistance("1000")
                 .setVin("464 32 902")
                 .setBrand("Volvo")
+                .setModel("740")
         );
     }
 
