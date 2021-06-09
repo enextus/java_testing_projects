@@ -1,7 +1,5 @@
 package com.ilCarro.qa14;
 
-import com.ilCarro.qa14.TestBase;
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -9,7 +7,7 @@ public class LoginTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (!isSignUpFormPresent()) {
+        if (!isSignUpButtonPresent()) {
             logout();
         }
     }
@@ -17,7 +15,7 @@ public class LoginTests extends TestBase {
     @Test
     public void loginRegisteredUserPositiveTest() {
 
-        click(By.xpath("//ul[@class='header__nav desktop']/li[5]"));
+        clickOnLoginTab();
 
         fillLoginForm(new User().withEmail("hummels@gmail.com")
                 .withPassword("Hummels098765"));
@@ -28,9 +26,16 @@ public class LoginTests extends TestBase {
 
     }
 
-    public void fillLoginForm(User user) {
-        type(By.cssSelector("[name='email']"), user.getEmail());
-        type(By.name("password"), user.getPassword());
+    @Test
+    public void loginRegisteredUserWithWrongPasswordNegativeTest() {
+
+        clickOnLoginTab();
+
+        fillLoginForm(new User().withEmail("hummels@gmail.com")
+                .withPassword("hummels098765"));
+
+        submit();
+
     }
 
 }
