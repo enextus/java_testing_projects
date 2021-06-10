@@ -27,7 +27,7 @@ public class SearchItemTest {
 
     @Test
     public void itemTest() {
-
+        click(By.xpath("///html/body/div[4]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[2]/button"));
         click(By.cssSelector("[data-id='market']"));
         switchToNextTab();
         click(By.cssSelector("[href='/catalog--elektronika/54440']"));
