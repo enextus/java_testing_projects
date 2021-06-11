@@ -15,7 +15,8 @@ public class TestBase {
         wd = new ChromeDriver();
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        wd.navigate().to("https://yandex.ru/");
+        //wd.navigate().to("https://yandex.ru/");
+        wd.get("http://demo.guru99.com/selenium/guru99home/");
     }
 
     @AfterMethod(enabled = false)
