@@ -5,10 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class RefreshDemo {
-    public static void main(String args[]) throws InterruptedException
-    {
-
-
+    public static void main(String args[]) {
         WebDriver driver = new ChromeDriver();
         Dimension d = new Dimension(500, 600);
 
