@@ -1,30 +1,26 @@
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class RefreshTest extends TestBase {
 
     @Test
     public void itemTest() throws InterruptedException {
 
-/*        goToMarket();
-        switchToNextTab();
+        wd.manage().window().maximize();
 
-        selectElectronicaDepartment();
+        for (int i = 0; i < 3; i++) {
+            wd.navigate().refresh();
+        }
 
-        filterItem(
-                new Item().setItemType("smartfony/16814639/list?glfilter=4940921%3A13475069&hid=91491")
-                        .setPriceFrom("20000")
-                        .setPriceTo("35000")
-                        .setBrand("Apple"));
-        refresh();
+        wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        pause();
-        String itemName = getItemNameFromListByOrder(2);
+        wd.manage().window().setSize(d);
+        wd.navigate().refresh();
 
-        typeInSearchInputField(itemName);
-        String foundItemName = getItemNameFromListByOrder(1);
-        Assert.assertEquals(foundItemName, itemName);*/
+        wd.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-
+        wd.manage().window().maximize();
     }
 
 }

@@ -1,3 +1,4 @@
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -9,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
 
     WebDriver wd = new ChromeDriver();
+    Dimension d = new Dimension(500, 600);
 
     @BeforeMethod
     public void setUp() {
