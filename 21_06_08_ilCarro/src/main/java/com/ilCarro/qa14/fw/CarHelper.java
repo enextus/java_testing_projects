@@ -1,4 +1,4 @@
-package com.ilCarro.qa14.framework;
+package com.ilCarro.qa14.fw;
 
 import com.ilCarro.qa14.models.Car;
 import org.openqa.selenium.By;
