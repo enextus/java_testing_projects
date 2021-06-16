@@ -47,12 +47,14 @@ public class APITest {
     @Test
     public void postNewUserRegistrationTest() throws IOException {
         String response = Request.Post(baseURL + "/registration")
-                .addHeader("Authorization", "VGVzdDQ1NjpUZXN0ZXI0NTY=")
+                .addHeader("Authorization", "VGVzdHF3ZWU6VGVzdGVydGVydGVy")
                 .bodyString("{\n" +
-                        "  \"first_name\": \"Test456\",\n" +
-                        "  \"second_name\": \"Tester456\"\n" +
+                        "  \"first_name\": \"Testqwee\",\n" +
+                        "  \"second_name\": \"Testerterter\"\n" +
                         "}", ContentType.APPLICATION_JSON)
                 .execute().returnContent().asString();
+
         System.out.println(response);
     }
+
 }
