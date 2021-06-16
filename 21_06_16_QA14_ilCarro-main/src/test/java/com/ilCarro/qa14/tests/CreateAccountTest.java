@@ -36,7 +36,8 @@ public class CreateAccountTest extends TestBase {
                 .withEmail("hummels2" + System.currentTimeMillis() + "@gmail.com")
                 .withPassword("Hummels0987652"));*/
 
-                app.user().fillRegistrationForm(user);
+
+        app.user().fillRegistrationForm(user);
 
         System.out.println("" + user);
 
