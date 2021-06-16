@@ -1,6 +1,7 @@
 package com.ilCarro.qa14.api;
 
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.entity.ContentType;
@@ -17,16 +18,16 @@ public class APITest {
     public void loginRegisteredUserPositiveTest() throws IOException {
         String response = getAuthorizationUser(baseURL+"/user/login",
                 "Authorization", "dGVzdGVyQkBiLmNvOjEyMzQ1NjdCYg==");
-        //System.out.println(response);
 
-        JsonElement parsed = new JsonParser().parse(response);
+        System.out.println(response);
 
-        JsonElement name = parsed.getAsJsonObject().get("first_name");
+        JsonObject parsedObject = JsonParser.parseString(response).getAsJsonObject();
+
+        JsonElement name = parsedObject.get("first_name");
         Assert.assertEquals(name.toString(),"\"TesterB\"");
 
-        JsonElement registration_date = parsed.getAsJsonObject().get("registration_date");
+        JsonElement registration_date = parsedObject.get("registration_date");
         Assert.assertEquals(registration_date.toString(),"\"2021-05-20\"");
-
     }
 
     public String getAuthorizationUser(String controller, String key, String value) throws IOException {
@@ -46,12 +47,13 @@ public class APITest {
     @Test
     public void postNewUserRegistrationTest() throws IOException {
         String response = Request.Post(baseURL + "/registration")
-                .addHeader("Authorization", "dHRAaGgueXk6VHRZeTEyMzQ1Njc=")
+                .addHeader("Authorization", "VGVzdDQ1NjpUZXN0ZXI0NTY=")
                 .bodyString("{\n" +
-                        "  \"first_name\": \"Test\",\n" +
-                        "  \"second_name\": \"Tester\"\n" +
+                        "  \"first_name\": \"Test456\",\n" +
+                        "  \"second_name\": \"Tester456\"\n" +
                         "}", ContentType.APPLICATION_JSON)
                 .execute().returnContent().asString();
         System.out.println(response);
+        Assert.assertEquals(response,"400");
     }
 }

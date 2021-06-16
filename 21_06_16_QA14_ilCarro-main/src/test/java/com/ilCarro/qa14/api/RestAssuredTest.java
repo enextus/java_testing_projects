@@ -18,11 +18,10 @@ public class RestAssuredTest {
 
         Response response = httpRequest.
                 given().contentType(ContentType.JSON)
-                .given().header("Authorization", "VGVzdGVyNDMyOlRlc3RlcjQ=")
+                .given().header("Authorization", "VGVzdGVyNTU6VGVzdGVyNjY=")
                 .request().body("{\n" +
-                        "  \"first_name\": \"Tester432\",\n" +
-                        "  \"second_name\": \"Tester4\",\n" +
-                        "  \"email\": \"ert@rtz.de\"\n" +
+                        "  \"first_name\": \"Tester55\",\n" +
+                        "  \"second_name\": \"Tester66\"\n" +
                         "}")
                 .when().post("https://java-3-ilcarro-team-b.herokuapp.com/registration");
 
@@ -41,7 +40,7 @@ public class RestAssuredTest {
 
     }
 
-    @Test
+/*    @Test
     public void postNewUserRegistrationTestTwo() {
         String jsonString = "{ \"name\":\"John\"}";
 
@@ -51,6 +50,6 @@ public class RestAssuredTest {
 
         Assert.assertEquals(jsonObject, jsonObjectAlt);
 
-    }
+    }*/
 
 }
