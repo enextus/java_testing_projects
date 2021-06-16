@@ -18,10 +18,11 @@ public class RestAssuredTest {
 
         Response response = httpRequest.
                 given().contentType(ContentType.JSON)
-                .given().header("Authorization", "dHR0dEBoaC55eTpUdFl5MTIzNDU2Nw==")
+                .given().header("Authorization", "VGVzdGVyNDMyOlRlc3RlcjQ=")
                 .request().body("{\n" +
-                        "  \"first_name\": \"Tester\",\n" +
-                        "  \"second_name\": \"Tester\"\n" +
+                        "  \"email\": \"ert@rtz.de\",\n" +
+                        "  \"first_name\": \"Tester432\",\n" +
+                        "  \"second_name\": \"Tester4\"\n" +
                         "}")
                 .when().post("https://java-3-ilcarro-team-b.herokuapp.com/registration");
 
@@ -31,7 +32,8 @@ public class RestAssuredTest {
         int statusCode = response.getStatusCode();
         System.out.println(statusCode);
 
-        JsonElement parsed = new JsonParser().parse(responseBody);
+        //JsonElement parsed = new JsonParser().parse(responseBody);
+        JsonElement parsed = JsonParser.parseString(responseBody);
         String fName = parsed.getAsJsonObject().get("first_name").toString();
         System.out.println(fName);
 
@@ -41,29 +43,14 @@ public class RestAssuredTest {
 
     @Test
     public void postNewUserRegistrationTestTwo() {
-        RequestSpecification httpRequest = io.restassured.RestAssured.given();
+        String jsonString = "{ \"name\":\"John\"}";
 
-        Response response = httpRequest.
-                given().contentType(ContentType.JSON)
-                .given().header("Authorization", "dHR0dEBoaC55eTpUdFl5MTIzNDU2Nw==")
-                .request().body("{\n" +
-                        "  \"first_name\": \"Tester\",\n" +
-                        "  \"second_name\": \"Tester\"\n" +
-                        "}")
-                .when().post("https://java-3-ilcarro-team-b.herokuapp.com/registration");
+        JsonObject jsonObjectAlt = JsonParser.parseString(jsonString).getAsJsonObject();
+        // Shows deprecated warning for new JsonParser() and parse(jsonString)
+        JsonObject jsonObject = new JsonParser().parse(jsonString).getAsJsonObject();
 
-        String responseBody = response.getBody().asString();
-        System.out.println(responseBody);
+        Assert.assertEquals(jsonObject, jsonObjectAlt);
 
-        int statusCode = response.getStatusCode();
-        System.out.println(statusCode);
-
-        JsonElement parsed = new JsonParser().parse(responseBody);
-
-        String fName = parsed.getAsJsonObject().get("first_name").toString();
-        System.out.println(fName);
-
-        Assert.assertEquals(statusCode,200, "Bug:status code is coming different");
     }
 
 }
