@@ -54,6 +54,6 @@ public class APITest {
                         "}", ContentType.APPLICATION_JSON)
                 .execute().returnContent().asString();
         System.out.println(response);
-        Assert.assertEquals(response,"400");
+
     }
 }
