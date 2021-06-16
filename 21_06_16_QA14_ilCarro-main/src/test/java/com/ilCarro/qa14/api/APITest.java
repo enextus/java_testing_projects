@@ -44,6 +44,8 @@ public class APITest {
         Assert.assertEquals(statusCode,400);
     }
 
+
+
     @Test
     public void postNewUserRegistrationTest() throws IOException {
 /*        String response = Request.Post(baseURL + "/registration")

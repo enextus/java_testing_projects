@@ -24,11 +24,21 @@ public class CreateAccountTest extends TestBase {
         app.header().clickOnSignUpTab();
         app.user().isSignUpFormPresent();
 
-        app.user().fillRegistrationForm(new User()
+        User user = new User()
                 .withFirstName("Mats2")
                 .withSecondName("Hummels2")
                 .withEmail("hummels2" + System.currentTimeMillis() + "@gmail.com")
-                .withPassword("Hummels0987652"));
+                .withPassword("Hummels0987652");
+
+/*        app.user().fillRegistrationForm(new User()
+                .withFirstName("Mats2")
+                .withSecondName("Hummels2")
+                .withEmail("hummels2" + System.currentTimeMillis() + "@gmail.com")
+                .withPassword("Hummels0987652"));*/
+
+                app.user().fillRegistrationForm(user);
+
+        System.out.println("" + user);
 
         app.user().clickCheckPolicy();
         app.user().submit();
