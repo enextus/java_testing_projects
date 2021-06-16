@@ -46,15 +46,24 @@ public class APITest {
 
     @Test
     public void postNewUserRegistrationTest() throws IOException {
-        String response = Request.Post(baseURL + "/registration")
-                .addHeader("Authorization", "VGVzdHF3ZWU6VGVzdGVydGVydGVy")
+/*        String response = Request.Post(baseURL + "/registration")
+                .addHeader("Authorization", "dHRAaGgueXk6VHRZeTEyMzQ1Njc=")
                 .bodyString("{\n" +
-                        "  \"first_name\": \"Testqwee\",\n" +
-                        "  \"second_name\": \"Testerterter\"\n" +
+                        "  \"first_name\": \"Test\",\n" +
+                        "  \"second_name\": \"Tester\"\n" +
                         "}", ContentType.APPLICATION_JSON)
                 .execute().returnContent().asString();
 
-        System.out.println(response);
+        System.out.println(response);*/
+
+        int statusCode = Request.Post(baseURL + "/registration")
+                .addHeader("Authorization", "dHRAaGgueXk6VHRZeTEyMzQ1Njc=")
+                .bodyString("{\n" +
+                        "  \"first_name\": \"Test\",\n" +
+                        "  \"second_name\": \"Tester\"\n" +
+                        "}", ContentType.APPLICATION_JSON)
+                .execute().returnResponse().getStatusLine().getStatusCode();
+        Assert.assertEquals(statusCode,409);
     }
 
 }
