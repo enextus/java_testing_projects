@@ -20,9 +20,9 @@ public class RestAssuredTest {
                 given().contentType(ContentType.JSON)
                 .given().header("Authorization", "VGVzdGVyNDMyOlRlc3RlcjQ=")
                 .request().body("{\n" +
-                        "  \"email\": \"ert@rtz.de\",\n" +
                         "  \"first_name\": \"Tester432\",\n" +
-                        "  \"second_name\": \"Tester4\"\n" +
+                        "  \"second_name\": \"Tester4\",\n" +
+                        "  \"email\": \"ert@rtz.de\"\n" +
                         "}")
                 .when().post("https://java-3-ilcarro-team-b.herokuapp.com/registration");
 
