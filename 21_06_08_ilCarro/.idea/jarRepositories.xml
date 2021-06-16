@@ -16,5 +16,10 @@
       <option name="name" value="MavenRepo" />
       <option name="url" value="https://repo.maven.apache.org/maven2/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="55d3a62d-4715-4e2a-99fd-1dfa88a45551" />
+      <option name="name" value="55d3a62d-4715-4e2a-99fd-1dfa88a45551" />
+      <option name="url" value="https://org.slf4j" />
+    </remote-repository>
   </component>
 </project>

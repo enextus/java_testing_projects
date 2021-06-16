@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class HeaderHelper extends HelperBase{
+public class HeaderHelper extends HelperBase {
+
     public HeaderHelper(WebDriver wd) {
         super(wd);
     }
@@ -17,9 +18,9 @@ public class HeaderHelper extends HelperBase{
         click(By.cssSelector("[href='/signup']"));
     }
 
-    public void checkSearchPageLaunch() {
+    public void checkSearchPageLounch() {
         click(By.xpath("//ul[@class='header__nav desktop']/li[1]"));
-        Assert.assertTrue(isElementPresentTwo(By.cssSelector(".search-sidebar__content")));
+        Assert.assertTrue(isElementPresent1(By.cssSelector(".search-sidebar__content")));
     }
 
 }

@@ -5,17 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class UserHelper extends HelperBase{
+public class UserHelper extends HelperBase {
     public UserHelper(WebDriver wd) {
         super(wd);
     }
 
     public void logout() {
         click(By.xpath("//a[contains(.,'logOut')]"));
-    }
-
-    public void clickOnLoginTab() {
-        click(By.xpath("//ul[@class='header__nav desktop']/li[5]"));
     }
 
     public boolean isSignUpButtonPresent() {
@@ -28,6 +24,10 @@ public class UserHelper extends HelperBase{
 
     public void submit() {
         click(By.cssSelector("[type='submit']"));
+    }
+
+    public void clickOnLoginTab() {
+        click(By.xpath("//ul[@class='header__nav desktop']/li[5]"));
     }
 
     public void fillLoginForm(User user) {
@@ -47,11 +47,11 @@ public class UserHelper extends HelperBase{
     }
 
     public void isLogInFormPresent() {
-        Assert.assertTrue(isElementPresentTwo(By.xpath("//*[@id='root']/div/div[1]/div/div[2]")));
-        // Assert.assertTrue(isElementPresent(By.cssSelector(".Login_login__right_block__1niYm")));
+        Assert.assertTrue(isElementPresent(By.cssSelector(".Login_login__right_block__1niYm")));
+    }
 
-        // #root > div > div:nth-child(2) > div > div.Login_login__right_block__1niYm
-        // //*[@id="root"]/div/div[1]/div/div[2]
+    public boolean isLoginFormPresent() {
+        return isElementPresent(By.cssSelector(".Login_login__right_block__1niYm"));
     }
 
     public void clickCheckPolicy() {
@@ -64,4 +64,5 @@ public class UserHelper extends HelperBase{
         type(By.cssSelector("#email"), user.getEmail());
         type(By.cssSelector("#password"), user.getPassword());
     }
+
 }
