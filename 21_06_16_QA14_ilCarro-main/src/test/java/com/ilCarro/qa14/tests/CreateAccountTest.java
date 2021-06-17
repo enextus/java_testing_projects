@@ -25,8 +25,8 @@ public class CreateAccountTest extends TestBase {
         app.user().isSignUpFormPresent();
 
         User user = new User()
-                .withFirstName("Mats2")
-                .withSecondName("Hummels2")
+                .withFirstName("Mats4")
+                .withSecondName("Hummels3")
                 .withEmail("hummels2" + System.currentTimeMillis() + "@gmail.com")
                 .withPassword("Hummels0987652");
 
@@ -39,7 +39,7 @@ public class CreateAccountTest extends TestBase {
 
         app.user().fillRegistrationForm(user);
 
-        System.out.println("" + user);
+        System.out.println("------>>>>\n" + user);
 
         app.user().clickCheckPolicy();
         app.user().submit();
