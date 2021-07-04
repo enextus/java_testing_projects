@@ -25,7 +25,7 @@ public class OpenAppTest extends TestBase {
 
     @Test
     public void testLaunchAppTwo() {
-        List<AppiumDriver> ad = app.driver.findElementsById("com.example.svetlana.scheduler:id/splash_logo_imgXXX");
+        List<AppiumDriver> ad = app.driver.findElementsById("com.example.svetlana.scheduler:id/");
 
         Assert.assertTrue(ad.isEmpty());
     }
