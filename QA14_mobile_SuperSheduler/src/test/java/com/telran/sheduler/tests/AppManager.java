@@ -9,7 +9,6 @@ import java.net.URL;
 
 public class AppManager {
 
-
     AppiumDriver driver;
     DesiredCapabilities capabilities;
 
@@ -30,4 +29,5 @@ public class AppManager {
     public void stop() {
         driver.quit();
     }
+
 }
