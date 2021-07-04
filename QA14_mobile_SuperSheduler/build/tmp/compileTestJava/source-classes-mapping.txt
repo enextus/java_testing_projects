@@ -1,0 +1,2 @@
+com/telran/sheduler/tests/OpenAppTest.java
+ com.telran.sheduler.tests.OpenAppTest

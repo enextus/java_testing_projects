@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.sheduler.tests.OpenAppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-04T19:17:22" hostname="enextus" time="0.001">
+  <properties/>
+  <testcase name="testLaunchApp" classname="com.telran.sheduler.tests.OpenAppTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jul 04, 2021 9:17:22 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

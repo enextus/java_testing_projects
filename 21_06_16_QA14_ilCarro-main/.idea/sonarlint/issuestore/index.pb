@@ -21,3 +21,17 @@ a
 1src/test/java/com/ilCarro/qa14/fw/HelperBase.java,6/6/66f23d5b8d69e552f45d4045ea4639f00a1580db
 i
 9src/test/java/com/ilCarro/qa14/fw/ApplicationManager.java,d/5/d5176e0770a46e5a8884b6624106e085fae02752
+b
+2src/test/java/com/ilCarro/qa14/tests/TestBase.java,d/2/d2fe2ce31a57c2b18ee51eb5d7a1e8ddf60db25f
+j
+:src/test/java/com/ilCarro/qa14/tests/OpenHomePageTest.java,1/6/166a3bf2d5db211d480623bd5f80bd940756e5cd
+d
+4src/test/java/com/ilCarro/qa14/tests/LoginTests.java,b/b/bb35c96ab187f40c083c0694f371c6469246c8af
+d
+4src/test/java/com/ilCarro/qa14/tests/HeaderTest.java,6/f/6ffdedc639654f5de29945aaa36b82048fbedc41
+g
+7src/test/java/com/ilCarro/qa14/tests/CreateCarTest.java,9/a/9a0c7f844f716067cc72d275c3b39c27bc17bd65
+k
+;src/test/java/com/ilCarro/qa14/tests/CreateAccountTest.java,d/f/dfa7530c310d3a7a57ad13219578049ec2e7ed20
+g
+7src/test/java/com/ilCarro/qa14/tests/DataProviders.java,8/5/8575ffb1038f32a2a4591bf1add6122ea0585eff

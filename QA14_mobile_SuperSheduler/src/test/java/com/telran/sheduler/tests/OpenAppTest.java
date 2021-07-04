@@ -40,9 +40,9 @@ public class OpenAppTest {
     @Test
     public void testLaunchApp() {
 
+        driver.findElementsById("com.example.svetlana.scheduler:id/splash_logo_img");
 
-        Test.assertTrue(driver.findElementsById("com.example.svetlana.scheduler:id/splash_logo_img"));
+        // Assert.assertTrue(isElementPresent(By.cssSelector("form.signup__fields")));
     }
-
 
 }
