@@ -5,16 +5,18 @@ import org.testng.annotations.BeforeMethod;
 
 import java.net.MalformedURLException;
 
-public class TestBase extends AppManager{
+public class TestBase {
+
+    protected static AppManager app = new AppManager();
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-        init();
+        app.init();
     }
 
     @AfterMethod
     public void tearDown() {
-        stop();
+        app.stop();
     }
 
 }
