@@ -1,8 +1,12 @@
 package com.telran.sheduler.tests;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class OpenAppTest {
 
@@ -11,7 +15,7 @@ public class OpenAppTest {
     DesiredCapabilities capabilities;
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
         capabilities = new DesiredCapabilities();
 
         capabilities.setCapability("platformName", "Android");
@@ -22,6 +26,7 @@ public class OpenAppTest {
         capabilities.setCapability("appActivity", ".presentation.splashScreen.SplashScreenActivity");
         capabilities.setCapability("app", "/home/enextus/Desktop/v.0.0.3.apk");
 
+        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), capabilities);
     }
 
     /*{
