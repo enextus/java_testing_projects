@@ -17,9 +17,11 @@ public class OpenAppTest {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "8.0.0");
         capabilities.setCapability("deviceName", "qa14_mob");
+        capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("appPackage", "com.example.svetlana.scheduler");
         capabilities.setCapability("appActivity", ".presentation.splashScreen.SplashScreenActivity");
-        // capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("app", "/home/enextus/Desktop/v.0.0.3.apk");
+
     }
 
     /*{
