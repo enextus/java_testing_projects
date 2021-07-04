@@ -30,10 +30,11 @@ public class OpenAppTest {
     }
 
     /*{
-  "platformName": "Android",
-  "platformVersion": "8.0.0",
-  "deviceName": "qa14_mob",
-  "appPackage": "com.example.svetlana.scheduler",
-  "appActivity": ".presentation.splashScreen.SplashScreenActivity"
-}*/
+    "platformName": "Android",
+    "platformVersion": "8.0.0",
+    "deviceName": "qa14_mob",
+    "appPackage": "com.example.svetlana.scheduler",
+    "appActivity": ".presentation.splashScreen.SplashScreenActivity"
+    }*/
+
 }
