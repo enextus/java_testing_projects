@@ -43,7 +43,9 @@ public class DataProviders {
         List<Object[]> list = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new FileReader
                 (new File("src/test/resources/tests_NewCar.csv")));
+
         String line = reader.readLine();
+
         while (line!=null) {
             String[] split = line.split(",");
             list.add(new Object[]{new Car().setCountry(split[0]).setAddress(split[1]).setDistance(split[2])});
@@ -55,28 +57,36 @@ public class DataProviders {
     @DataProvider
     public Iterator<Object[]> loginNegativeTestFromCSV() throws IOException {
         List<Object[]> list = new ArrayList<>();
+
         BufferedReader reader = new BufferedReader(new FileReader
                 (new File("src/test/resources/tests_Login.csv")));
+
         String line = reader.readLine();
+
         while (line!=null) {
             String[] split = line.split(",");
             list.add(new Object[]{new User().withEmail(split[0]).withPassword(split[1])});
             line = reader.readLine();
         }
+
         return list.iterator();
     }
 
     @DataProvider
     public Iterator<Object[]> loginPositiveTestFromCSV() throws IOException {
         List<Object[]> list = new ArrayList<>();
+
         BufferedReader reader = new BufferedReader(new FileReader
                 (new File("src/test/resources/tests_LoginPositive.csv")));
+
         String line = reader.readLine();
+
         while (line!=null) {
             String[] split = line.split(",");
             list.add(new Object[]{new User().withEmail(split[0]).withPassword(split[1])});
             line = reader.readLine();
         }
+
         return list.iterator();
     }
 

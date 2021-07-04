@@ -4,14 +4,14 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class OpenAppTest {
 
-    AppiumDriver ad;
-
+    AppiumDriver driver;
     DesiredCapabilities capabilities;
 
     @BeforeMethod
@@ -26,7 +26,7 @@ public class OpenAppTest {
         capabilities.setCapability("appActivity", ".presentation.splashScreen.SplashScreenActivity");
         capabilities.setCapability("app", "/home/enextus/Desktop/v.0.0.3.apk");
 
-        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), capabilities);
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), capabilities);
     }
 
     /*{
@@ -36,5 +36,13 @@ public class OpenAppTest {
     "appPackage": "com.example.svetlana.scheduler",
     "appActivity": ".presentation.splashScreen.SplashScreenActivity"
     }*/
+
+    @Test
+    public void testLaunchApp() {
+
+
+        Test.assertTrue(driver.findElementsById("com.example.svetlana.scheduler:id/splash_logo_img"));
+    }
+
 
 }
