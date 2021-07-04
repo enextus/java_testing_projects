@@ -1,2 +1,6 @@
+com/telran/sheduler/tests/AppManager.java
+ com.telran.sheduler.tests.AppManager
 com/telran/sheduler/tests/OpenAppTest.java
  com.telran.sheduler.tests.OpenAppTest
+com/telran/sheduler/tests/TestBase.java
+ com.telran.sheduler.tests.TestBase
