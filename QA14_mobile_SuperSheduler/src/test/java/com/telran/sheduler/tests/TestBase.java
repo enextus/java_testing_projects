@@ -1,5 +1,6 @@
 package com.telran.sheduler.tests;
 
+import com.telran.sheduler.fw.AppManager;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 

@@ -1,6 +1,14 @@
-com/telran/sheduler/tests/AppManager.java
- com.telran.sheduler.tests.AppManager
-com/telran/sheduler/tests/TestBase.java
- com.telran.sheduler.tests.TestBase
 com/telran/sheduler/tests/OpenAppTest.java
  com.telran.sheduler.tests.OpenAppTest
+com/telran/sheduler/fw/HelperBase.java
+ com.telran.sheduler.fw.HelperBase
+com/telran/sheduler/tests/TestBase.java
+ com.telran.sheduler.tests.TestBase
+com/telran/sheduler/fw/UserHelper.java
+ com.telran.sheduler.fw.UserHelper
+com/telran/sheduler/tests/LoginTests.java
+ com.telran.sheduler.tests.LoginTests
+com/telran/sheduler/models/User.java
+ com.telran.sheduler.models.User
+com/telran/sheduler/fw/AppManager.java
+ com.telran.sheduler.fw.AppManager
