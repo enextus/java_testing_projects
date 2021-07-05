@@ -62,5 +62,4 @@ public class EventCreationTests extends TestBase {
         app.event().saveEvent();
     }
 
-
 }
