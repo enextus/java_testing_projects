@@ -8,7 +8,7 @@ public class LoginTests extends TestBase {
 
     @Test
     public void registrationPositiveTest() {
-        app.user().login(new User().setEmail("neuer+1@gmail.com").setPassword("Neuer2021"));
+        app.user().login(new User().setEmail("neuer+70@gmail.com").setPassword("Neuer2021"));
         Assert.assertTrue(app.event().isWizardTitlePresent());
     }
 

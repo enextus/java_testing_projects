@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class HelperBase {
 
@@ -25,8 +26,8 @@ public class HelperBase {
     }
 
     public void type(By locator, String text) {
-        if (text!=null) {
-            if(!text.equals(driver.findElement(locator).getText())) {
+        if (text != null) {
+            if (!text.equals(driver.findElement(locator).getText())) {
                 tap(locator);
                 driver.findElement(locator).clear();
                 driver.findElement(locator).sendKeys(text);
@@ -35,7 +36,7 @@ public class HelperBase {
     }
 
     public WebElement waitForElement(By locator, int timeOut) {
-        return new WebDriverWait(driver,timeOut).until(ExpectedConditions.presenceOfElementLocated(locator));
+        return new WebDriverWait(driver, timeOut).until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     public void hideKeyboard() {
@@ -43,17 +44,17 @@ public class HelperBase {
     }
 
     public boolean isElementPresent(By locator) {
-        return driver.findElements(locator).size()>0;
+        return driver.findElements(locator).size() > 0;
     }
 
     public void waiForElementAndTap(By locator, int timeOut) {
-        new WebDriverWait(driver,timeOut)
+        new WebDriverWait(driver, timeOut)
                 .until(ExpectedConditions.presenceOfElementLocated(locator)).click();
     }
 
     public void waitForElementAndType(By locator, int timeOut, String text) {
-        if (text!=null) {
-            waiForElementAndTap(locator,timeOut);
+        if (text != null) {
+            waiForElementAndTap(locator, timeOut);
             driver.findElement(locator).clear();
             driver.findElement(locator).sendKeys(text);
         }
@@ -69,10 +70,11 @@ public class HelperBase {
         int stopX = (int) (size.width * 0.2);
 
         action.longPress(PointOption.point(startX, y))
-                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
                 .moveTo(PointOption.point(stopX, y))
                 .release()
                 .perform();
 
     }
+
+
 }

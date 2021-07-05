@@ -14,9 +14,15 @@ public class AppManager {
 
     UserHelper user;
     EventsHelper event;
+    WageHelper wage;
+
 
     public EventsHelper event() {
         return event;
+    }
+
+    public WageHelper wage() {
+        return wage;
     }
 
     public UserHelper user() {
@@ -33,13 +39,14 @@ public class AppManager {
         capabilities.setCapability("appPackage", "com.example.svetlana.scheduler");
         capabilities.setCapability("appActivity", ".presentation.splashScreen.SplashScreenActivity");
         capabilities.setCapability("app",
-                "C:/Users/Tel-Ran.de/Documents/qa/mobile/v.0.0.3.apk");
+                "/home/enextus/Desktop/v.0.0.3.apk");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         user = new UserHelper(driver);
         event = new EventsHelper(driver);
+        wage = new WageHelper(driver);
     }
 
     public void stop() {
