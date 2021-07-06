@@ -38,7 +38,7 @@ public class EventCreationTests extends TestBase {
         // preconditions for wizard
         if (!app.event().isNavPanelPresent()) {
             app.user().register();
-            app.wage().chooseWage("30");
+            app.wage().chooseWage("Belarusian ruble", "30");
         }
 
         app.event().tapOnPlusButton();
@@ -56,10 +56,11 @@ public class EventCreationTests extends TestBase {
         }
         app.event().tapOnPlusButton();
         app.event().tapOnPencilButton();
-        app.event().selectDate("past", "JUNE", "29");
+        app.event().selectDate("future", "JULY", "10");
 
         app.event().fillEventForm("Event", "1", 1, "50");
         app.event().saveEvent();
     }
+
 
 }
