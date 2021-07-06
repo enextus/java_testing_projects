@@ -4,11 +4,16 @@ import com.telran.scheduler.models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Random;
+
 public class LoginTests extends TestBase {
 
     @Test
     public void registrationPositiveTest() {
-        app.user().login(new User().setEmail("neuer+71@gmail.com").setPassword("Neuer2021"));
+        Random ran = new Random();
+        int ln = ran.nextInt(6) + 5;
+
+        app.user().login(new User().setEmail("neuer+" + ln + "@gmail.com").setPassword("Neuer2021"));
         Assert.assertTrue(app.event().isWizardTitlePresent());
     }
 
