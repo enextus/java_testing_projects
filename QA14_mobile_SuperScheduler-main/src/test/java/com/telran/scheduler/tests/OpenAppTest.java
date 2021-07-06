@@ -1,4 +1,3 @@
-
 package com.telran.scheduler.tests;
 
 import org.testng.annotations.Test;
