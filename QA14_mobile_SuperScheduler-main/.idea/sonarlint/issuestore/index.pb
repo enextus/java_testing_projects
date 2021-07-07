@@ -17,13 +17,7 @@ e
 gradlew,5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9
 ?
 settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
-h
-8src/test/java/com/telran/scheduler/tests/LoginTests.java,4/b/4b1bc3ea5dc5f1b37b986f3696ce348fb42704b8
-p
-@src/test/java/com/telran/scheduler/tests/EventCreationTests.java,5/0/504ad93dd9c897f4a933a09650487492fcf2704c
 f
 6src/test/java/com/telran/scheduler/tests/TestBase.java,a/9/a9d5f0931ec381af6a987070a7ba27e55f7d4a44
 e
 5src/test/java/com/telran/scheduler/fw/AppManager.java,b/7/b7ca5a04efc110f264bd5f2a906e71e1baca7fb6
-i
-9src/test/java/com/telran/scheduler/tests/OpenAppTest.java,8/d/8d2ad3a6bba7a8beb9ba9ac7bcdd85c081471e17

@@ -13,7 +13,7 @@ public class LoginTests extends TestBase {
         Random ran = new Random();
         int ln = ran.nextInt(6) + 5;
 
-        app.user().login(new User().setEmail("neuer+" + ln + "@gmail.com").setPassword("Neuer2021"));
+        app.user().login(new User().setEmail("neuer" + ln + "@gmail.com").setPassword("Neuer2021"));
         Assert.assertTrue(app.event().isWizardTitlePresent());
     }
 
