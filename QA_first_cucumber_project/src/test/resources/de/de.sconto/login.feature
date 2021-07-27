@@ -2,6 +2,7 @@ Feature: Sconto Login Feature
   In order to see the user area
   I log in to the website
 
+  @login
   Scenario: Our Goal is Successful Login
     Given I am on the homepage
     When I click on the Login icon
