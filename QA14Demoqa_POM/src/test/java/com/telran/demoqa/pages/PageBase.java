@@ -1,10 +1,16 @@
 package com.telran.demoqa.pages;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Random;
 
 public class PageBase {
 
@@ -34,6 +40,14 @@ public class PageBase {
 
 
 
+    }
+
+    public void takeScreenshotField(WebElement element) throws IOException {
+        element.isSelected();
+
+        File screenshotEmptyField = element.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(screenshotEmptyField,
+                new File(System.getProperty("user.dir") + "/screenshots" + new Random().nextInt() + ".png"));
     }
 
 }

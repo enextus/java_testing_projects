@@ -1,5 +1,6 @@
 package com.telran.demoqa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +22,7 @@ public class BookStorePage extends PageBase{
         return new LoginPage(driver);
     }
 
-    @FindBy(id="searchInput")
+    @FindBy(id="searchBox")
     WebElement searchInput;
 
     public BookStorePage typeInSearchInputFieldInput(String text) {
@@ -29,12 +30,12 @@ public class BookStorePage extends PageBase{
         return this;
     }
 
-
-
+    @FindBy(xpath="searchBox")
+    WebElement searchInput;
 
     public String takeNameOfBook() {
         pause(500);
-
+        return nameOfBook.getText();
     }
 
 
