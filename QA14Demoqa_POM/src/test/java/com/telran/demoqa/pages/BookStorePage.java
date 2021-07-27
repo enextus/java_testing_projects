@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static javax.swing.text.html.MinimalHTMLWriter.css;
 import static org.graalvm.compiler.nodes.PauseNode.pause;
 
 public class BookStorePage extends PageBase{
@@ -58,6 +59,13 @@ public class BookStorePage extends PageBase{
         return this;
     }
 
-    public ProfilePage clickOn
+    @FindBy(css=".show #item-3")
+    WebElement profileBtn;
+
+    public ProfilePage clickOnProfileButton() {
+        clickWithAction(profileBtn, 0, 700);
+
+        return new ProfilePage(driver);
+    }
 
 }

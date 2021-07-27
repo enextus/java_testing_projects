@@ -4,6 +4,7 @@ import com.telran.demoqa.pages.BookStorePage;
 import com.telran.demoqa.pages.HomePage;
 import com.telran.demoqa.pages.LoginPage;
 import com.telran.demoqa.tests.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,6 @@ public class AddBookToCollection extends TestBase {
         new BookStorePage(driver).typeInSearchInputFieldInput(text).clickByFirstBook()
                     .addBookToCollection().clickOnProfileButton();
 
-
+        Assert.assertTrue(new BookStorePage(driver).takeNameOfBook().contains(text));
     }
 }
