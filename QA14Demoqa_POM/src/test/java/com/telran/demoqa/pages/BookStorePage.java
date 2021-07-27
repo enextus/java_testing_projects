@@ -17,6 +17,10 @@ public class BookStorePage extends PageBase{
     @FindBy(id="login")
     WebElement loginBtn;
 
+    public BookStorePage(WebDriver driver) {
+        super(driver);
+    }
+
     public LoginPage goToLoginPage() {
         loginBtn.click();
         return new LoginPage(driver);
@@ -38,5 +42,22 @@ public class BookStorePage extends PageBase{
         return nameOfBook.getText();
     }
 
+
+    public BookStorePage clickByFirstBook() {
+
+        return this;
+    }
+
+    @FindBy(css=".text-right.fullButton")
+    WebElement addBookToCollectionBtn;
+
+    public BookStorePage addToYourCollection() {
+        clickWithAction(addBookToCollectionBtn, 0, 500);
+        driver.switchTo().alert().accept();
+
+        return this;
+    }
+
+    public ProfilePage clickOn
 
 }
