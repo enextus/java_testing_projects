@@ -1,0 +1,12 @@
+org/wikipedia/fw/ArticleHelper.java
+ org.wikipedia.fw.ArticleHelper
+org/wikipedia/fw/HelperBase.java
+ org.wikipedia.fw.HelperBase
+org/wikipedia/tests/TestBase.java
+ org.wikipedia.tests.TestBase
+org/wikipedia/tests/ArticleTest.java
+ org.wikipedia.tests.ArticleTest
+org/wikipedia/fw/AppManager.java
+ org.wikipedia.fw.AppManager
+org/wikipedia/tests/OpenAppTest.java
+ org.wikipedia.tests.OpenAppTest

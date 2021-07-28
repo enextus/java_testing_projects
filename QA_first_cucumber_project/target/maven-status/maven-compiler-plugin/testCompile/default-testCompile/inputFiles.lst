@@ -1,0 +1,7 @@
+/home/enextus/IdeaProjects/java_testing_projects/QA_first_cucumber_project/src/test/java/de/sconto/steps/LoginSteps.java
+/home/enextus/IdeaProjects/java_testing_projects/QA_first_cucumber_project/src/test/java/de/sconto/util/PropertiesLoader.java
+/home/enextus/IdeaProjects/java_testing_projects/QA_first_cucumber_project/src/test/java/de/sconto/RunCucumberTest.java
+/home/enextus/IdeaProjects/java_testing_projects/QA_first_cucumber_project/src/test/java/de/sconto/pages/HomePage.java
+/home/enextus/IdeaProjects/java_testing_projects/QA_first_cucumber_project/src/test/java/de/sconto/steps/HomePageSteps.java
+/home/enextus/IdeaProjects/java_testing_projects/QA_first_cucumber_project/src/test/java/de/sconto/pages/LoginPage.java
+/home/enextus/IdeaProjects/java_testing_projects/QA_first_cucumber_project/src/test/java/de/sconto/steps/WrongPasswordSteps.java

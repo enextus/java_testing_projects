@@ -1,0 +1,7 @@
+de/sconto/pages/HomePage.class
+de/sconto/steps/HomePageSteps.class
+de/sconto/util/PropertiesLoader.class
+de/sconto/pages/LoginPage.class
+de/sconto/steps/LoginSteps.class
+de/sconto/RunCucumberTest.class
+de/sconto/steps/WrongPasswordSteps.class

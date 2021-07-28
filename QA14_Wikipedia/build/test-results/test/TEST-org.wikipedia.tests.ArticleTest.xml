@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.wikipedia.tests.ArticleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-07T07:51:50" hostname="enextus" time="29.732">
+  <properties/>
+  <testcase name="testAddArticleToFavoritesAndRemove" classname="org.wikipedia.tests.ArticleTest" time="29.732"/>
+  <system-out><![CDATA[app opened
+Internet protocol suite
+]]></system-out>
+  <system-err><![CDATA[Jul 07, 2021 9:51:50 AM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
