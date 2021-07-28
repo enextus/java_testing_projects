@@ -16,4 +16,7 @@ public class SidePanelPage extends PageBase{
         clickWithAction(browserWindowsBtn,0,300);
         return new BrowserWindowsPage(driver);
     }
+
+    public void selectAlerts() {
+    }
 }
