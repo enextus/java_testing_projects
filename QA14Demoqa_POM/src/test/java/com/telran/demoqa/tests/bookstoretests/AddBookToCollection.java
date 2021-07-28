@@ -14,7 +14,8 @@ public class AddBookToCollection extends TestBase {
     public void ensurePreconditions() {
         new HomePage(driver).goToBookStore();
         new BookStorePage(driver).goToLoginPage();
-        new LoginPage(driver).login("neuer","Neuer1234!");
+
+        new LoginPage(driver).login("aaaa","Ku7854_Ku7854$$");
 
     }
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.demoqa.tests.bookstoretests.AddBookToCollection" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-28T08:19:52" hostname="enextus" time="1.764">
+  <properties/>
+  <testcase name="addBookToCollectionTest" classname="com.telran.demoqa.tests.bookstoretests.AddBookToCollection" time="1.764"/>
+  <system-out><![CDATA[10:19:51 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Book Store Application']
+10:19:51 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Book Store Application']found.
+10:19:51 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: login
+10:19:51 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: loginfound.
+10:19:51 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: userName
+10:19:51 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: userNamefound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: userName
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: userNamefound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: userName
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: userNamefound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: password
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: passwordfound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: password
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: passwordfound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: password
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: passwordfound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: login
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: loginfound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: searchBox
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: searchBoxfound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: searchBox
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: searchBoxfound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: searchBox
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: searchBoxfound.
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[@class='mr-2']/a
+10:19:52 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[@class='mr-2']/afound.
+10:19:53 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.cssSelector: .text-right.fullButton
+10:19:53 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.cssSelector: .text-right.fullButtonfound.
+10:19:53 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.cssSelector: .show #item-3
+10:19:53 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.cssSelector: .show #item-3found.
+10:19:54 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[@class='mr-2']/a
+10:19:54 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[@class='mr-2']/afound.
+]]></system-out>
+  <system-err><![CDATA[ChromeDriver was started successfully.
+Jul 28, 2021 10:19:49 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
