@@ -9,12 +9,11 @@ import org.testng.annotations.Test;
 
 public class DeleteBookFromCollection extends TestBase {
 
-
     @BeforeMethod
     public void ensurePreconditions() {
         new HomePage(driver).goToBookStore();
         new BookStorePage(driver).goToLoginPage();
-        new LoginPage(driver).login("aaaa", "Ku7854_Ku7854$$");
+        new LoginPage(driver).login("neuer","Neuer1234!");
 
     }
 
@@ -22,9 +21,8 @@ public class DeleteBookFromCollection extends TestBase {
     public void deleteBookFromCollectionTest() {
         String text = "Git";
 
-        new BookStorePage(driver).typeInSearchInputFieldInput(text).clickByFirstBook()
+        new BookStorePage(driver).typeInSearchFieldInput(text).clickByFirstBook()
                 .addToYourCollection().clickOnProfileButton()
                 .clickOnTrashToDeleteBook();
-
     }
 }

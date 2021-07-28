@@ -8,7 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SearchBookTests  extends TestBase {
+import java.io.IOException;
+
+public class SearchBookTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
@@ -16,12 +18,19 @@ public class SearchBookTests  extends TestBase {
     }
 
     @Test
-    public void searchBookPositiveTest() {
+    public void searchBookPositiveTest() throws IOException {
         String text = "Git";
-        new BookStorePage(driver).typeInSearchInputFieldInput(text).takeNameOfBook();
+        new BookStorePage(driver).typeInSearchFieldInput(text).takeNameOfBook();
         Assert.assertTrue(new BookStorePage(driver).takeNameOfBook().contains(text));
 
-        new BookStorePage(driver).takeScreenshotField(driver.findElement(By.xpath("//span[")));
-
+        new BookStorePage(driver).takeScreenshotField(driver
+                .findElement(By.xpath("//span[@class='mr-2']/a")));
     }
+
+    @Test
+    public void verifyEmptyFieldtest() {
+        new BookStorePage(driver).typeInSearchFieldInput("  ").verifyEmptyField();
+        Assert.assertTrue(new BookStorePage(driver).verifyEmptyField().contains(""));
+    }
+
 }

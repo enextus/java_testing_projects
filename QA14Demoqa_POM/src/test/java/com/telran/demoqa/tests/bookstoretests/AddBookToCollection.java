@@ -14,7 +14,7 @@ public class AddBookToCollection extends TestBase {
     public void ensurePreconditions() {
         new HomePage(driver).goToBookStore();
         new BookStorePage(driver).goToLoginPage();
-        new LoginPage(driver).login("aaaa", "Ku7854_Ku7854$$");
+        new LoginPage(driver).login("neuer","Neuer1234!");
 
     }
 
@@ -22,9 +22,10 @@ public class AddBookToCollection extends TestBase {
     public void addBookToCollectionTest() {
         String text = "Git";
 
-        new BookStorePage(driver).typeInSearchInputFieldInput(text).clickByFirstBook()
-                    .addBookToCollection().clickOnProfileButton();
+        new BookStorePage(driver).typeInSearchFieldInput(text).clickByFirstBook()
+                .addToYourCollection().clickOnProfileButton();
 
         Assert.assertTrue(new BookStorePage(driver).takeNameOfBook().contains(text));
     }
+
 }
