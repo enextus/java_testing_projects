@@ -30,7 +30,8 @@ public class MyListener extends AbstractWebDriverEventListener {
     @Override
     public void onException(Throwable throwable, WebDriver driver) {
         logger.error(throwable.toString());
-        String screen = "screenshots/screen-" + (System.currentTimeMillis()/1000%3600) + ".png";
+        String screen = "screenshots/screen-" +
+                (System.currentTimeMillis()/1000%3600) + ".png";
         new PageBase(driver).takeScreenshot(screen);
         logger.error(screen);
 

@@ -16,4 +16,13 @@ public class HomePage extends PageBase{
         clickWithAction(bookStoreBtn,0,700);
         return new BookStorePage(driver);
     }
+
+    @FindBy(xpath = "//div[@class='category-cards']/div[.='Alerts, Frame & Windows']")
+    WebElement alertFrameAndWindowBtn;
+
+    public SidePanelPage goToFrameAlertAndWindowPage() {
+        clickWithAction(alertFrameAndWindowBtn,0,300);
+        return new SidePanelPage(driver);
+    }
+
 }
