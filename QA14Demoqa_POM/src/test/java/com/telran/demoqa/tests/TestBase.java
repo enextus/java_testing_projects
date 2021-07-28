@@ -24,7 +24,7 @@ public class TestBase {
         driver.register(new MyListener());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://demoqa.com");
+        driver.get("https://demoqa.com/login");
     }
 
     @AfterMethod(enabled = false)
