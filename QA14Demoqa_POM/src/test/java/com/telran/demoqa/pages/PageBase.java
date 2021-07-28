@@ -1,11 +1,8 @@
 package com.telran.demoqa.pages;
 
+import com.google.common.io.Files;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
@@ -27,27 +24,42 @@ public class PageBase {
             element.clear();
             element.sendKeys(text);
         }
-
     }
 
     public void clickWithAction(WebElement element, int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(" + x + "," + y + ")");
+        element.click();
+
 //        Actions actions = new Actions(driver);
 //        actions.moveToElement(element).moveByOffset(x, y).click().build().perform();
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.")
+    }
 
-
-
-
+    public void pause(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void takeScreenshotField(WebElement element) throws IOException {
         element.isSelected();
 
         File screenshotEmptyField = element.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshotEmptyField,
-                new File(System.getProperty("user.dir") + "/screenshots" + new Random().nextInt() + ".png"));
+        FileUtils.copyFile(screenshotEmptyField, new File(System
+                .getProperty("user.dir") + "/screenshots/" + new Random().nextInt() + ".png"));
     }
 
+    public void takeScreenshot(String pathToFiele) {
+        File tmp = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File screenshot = new File(pathToFiele);
+        try {
+            Files.copy(tmp,screenshot);
+        }catch (IOException e) {
+            e.fillInStackTrace();
+        }
+
+    }
 }

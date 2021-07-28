@@ -5,67 +5,65 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static javax.swing.text.html.MinimalHTMLWriter.css;
-import static org.graalvm.compiler.nodes.PauseNode.pause;
+import java.util.Collection;
 
-public class BookStorePage extends PageBase{
-
-    public BookStorePage(WebDriver driver, WebElement loginBtn) {
-        super(driver);
-        this.loginBtn = loginBtn;
-    }
-
-    @FindBy(id="login")
-    WebElement loginBtn;
-
+public class BookStorePage extends PageBase {
     public BookStorePage(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(id = "login")
+    WebElement loginBtn;
 
     public LoginPage goToLoginPage() {
         loginBtn.click();
         return new LoginPage(driver);
     }
 
-    @FindBy(id="searchBox")
+    @FindBy(id = "searchBox")
     WebElement searchInput;
 
-    public BookStorePage typeInSearchInputFieldInput(String text) {
-        type(searchInput, text);
+    public BookStorePage typeInSearchFieldInput(String text) {
+        type(searchInput,text);
         return this;
     }
 
-    @FindBy(xpath="searchBox")
-    WebElement searchInput;
+    @FindBy(xpath = "//span[@class='mr-2']/a")
+    WebElement nameOfBook;
 
     public String takeNameOfBook() {
-        pause(500);
+        // pause(500);
         return nameOfBook.getText();
     }
 
+    @FindBy(css = ".rt-tr-group:nth-child(1) .rt-td:nth-child(2)")
+    WebElement firstTitle;
+
+    public String verifyEmptyField() {
+        return firstTitle.getText();
+    }
 
     public BookStorePage clickByFirstBook() {
-
+        nameOfBook.click();
         return this;
     }
 
-    @FindBy(css=".text-right.fullButton")
-    WebElement addBookToCollectionBtn;
+    @FindBy(css = ".text-right.fullButton")
+    WebElement addToCollectionBtn;
+
 
     public BookStorePage addToYourCollection() {
-        clickWithAction(addBookToCollectionBtn, 0, 500);
+        clickWithAction(addToCollectionBtn,0,700);
+        pause(500);
         driver.switchTo().alert().accept();
-
         return this;
     }
 
-    @FindBy(css=".show #item-3")
+    @FindBy(css = ".show #item-3")
     WebElement profileBtn;
 
     public ProfilePage clickOnProfileButton() {
-        clickWithAction(profileBtn, 0, 700);
-
+        clickWithAction(profileBtn,0,700);
         return new ProfilePage(driver);
     }
-
 }

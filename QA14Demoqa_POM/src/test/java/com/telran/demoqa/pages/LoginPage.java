@@ -4,8 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends PageBase{
-
+public class LoginPage extends PageBase {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -14,13 +13,24 @@ public class LoginPage extends PageBase{
     WebElement userName;
 
     @FindBy(id = "password")
-    WebElement password;
+    WebElement pswd;
 
     @FindBy(id = "login")
     WebElement loginBtn;
 
-//    @FindBys(id="userName", )
-//    WebElement login;
+    public ProfilePage login(String name, String password) {
+        type(userName,name);
+        type(pswd,password);
+        clickWithAction(loginBtn,0,300);
+        return new ProfilePage(driver);
+    }
+
+    public LoginPage loginNegative(String name, String password) {
+        type(userName,name);
+        type(pswd,password);
+        clickWithAction(loginBtn,0,300);
+        return this;
+    }
 
 
 }
