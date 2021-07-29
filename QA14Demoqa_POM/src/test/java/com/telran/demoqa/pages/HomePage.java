@@ -35,7 +35,7 @@ public class HomePage extends PageBase{
 
     //#########################################################################################################
 
-    @FindBy(xpath = "//div//h5[.=''Widgets']")
+    @FindBy(xpath = "//div//h5[.='Widgets']")
     WebElement widgetsBtn;
 
     public SidePanelPage gotoWidgetsPage() {
