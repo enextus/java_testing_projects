@@ -1,5 +1,6 @@
 package com.telran.demoqa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,5 +22,14 @@ public class SidePanelPage extends PageBase{
     }
 
     public void selectSelectMenuBtn() {
+    }
+
+    @FindBy(xpath = "//span[.='Practice Form']")
+    WebElement practiceFormBtn;
+
+    public PracticeFormPage selectPracticeForm() {
+        click(By.)
+
+        return new PracticeFormPage(driver);
     }
 }

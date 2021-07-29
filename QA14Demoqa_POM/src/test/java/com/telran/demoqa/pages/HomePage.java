@@ -39,9 +39,13 @@ public class HomePage extends PageBase{
     WebElement widgetsBtn;
 
     public SidePanelPage gotoWidgetsPage() {
-        clickWithAction(widgetsBtn,0,300);
+        clickWithAction(widgetsBtn, 0, 300);
 
         return new SidePanelPage(driver);
     }
 
+    public SidePanelPage goToForms() {
+        clickWithAction(formBtn, )
+        return new SidePanelPage(driver);
+    }
 }
