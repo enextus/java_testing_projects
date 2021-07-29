@@ -19,4 +19,7 @@ public class SidePanelPage extends PageBase{
 
     public void selectAlerts() {
     }
+
+    public void selectSelectMenuBtn() {
+    }
 }

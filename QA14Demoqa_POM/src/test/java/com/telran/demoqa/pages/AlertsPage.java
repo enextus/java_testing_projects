@@ -1,6 +1,5 @@
 package com.telran.demoqa.pages;
 
-import com.telran.demoqa.pages.PageBase;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,12 +7,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Collection;
+
 public class AlertsPage extends PageBase {
     public AlertsPage(WebDriver driver) {
         super(driver);
     }
+
     @FindBy(id = "timerAlertButton")
     WebElement alertBtn2;
+
     public AlertsPage clickAlertButton2AndWait() {
         alertBtn2.click();
         WebDriverWait wait = new WebDriverWait(driver,5);
@@ -46,5 +49,28 @@ public class AlertsPage extends PageBase {
         return confirmText.getText();
     }
 
+    @FindBy(id = "promtButton")
+    WebElement alertBtn4;
+
+    public AlertsPage clickAlertButton4() {
+        alertBtn4.click();
+        return this;
+    }
+
+
+    public AlertsPage sendTextToAlert(String text) {
+        if (text != null)
+            driver.switchTo().alert().sendKeys(text);
+        System.out.println(driver.switchTo().alert().getText());
+        driver.switchTo().alert().accept();
+        return this;
+    }
+
+    @FindBy(xpath = "//span[@id='promptResult']")
+    WebElement confirmSendText;
+
+    public String getConfirmLastResult() {
+        return confirmSendText.getText();
+    }
 
 }

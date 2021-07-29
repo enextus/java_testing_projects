@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.demoqa.tests.WindowsTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-29T07:22:47" hostname="enextus" time="1.924">
+  <properties/>
+  <testcase name="newTabTest" classname="com.telran.demoqa.tests.WindowsTests" time="0.141"/>
+  <testcase name="newWindowsTest" classname="com.telran.demoqa.tests.WindowsTests" time="0.139"/>
+  <system-out><![CDATA[09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']
+09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']found.
+09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Browser Windows']
+09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Browser Windows']found.
+09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: tabButton
+09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: tabButtonfound.
+09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: sampleHeading
+09:22:47 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: sampleHeadingfound.
+09:22:48 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']
+09:22:48 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']found.
+09:22:49 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Browser Windows']
+09:22:49 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Browser Windows']found.
+09:22:49 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: windowButton
+09:22:49 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: windowButtonfound.
+09:22:49 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: sampleHeading
+09:22:49 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: sampleHeadingfound.
+]]></system-out>
+  <system-err><![CDATA[ChromeDriver was started successfully.
+Jul 29, 2021 9:22:45 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ChromeDriver was started successfully.
+Jul 29, 2021 9:22:47 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
