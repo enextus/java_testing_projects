@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class SelectMenuPage extends TestBase {
+public class SelectMenuPage extends PageBase {
 
 
     public SelectMenuPage(EventFiringWebDriver driver) {
-        super();
+        super(driver);
     }
 
     @FindBy(xpath = "//select[@id='oldSelectMenu']")
@@ -42,7 +42,7 @@ public class SelectMenuPage extends TestBase {
     WebElement lostFocus;
 
     public SelectMenuPage clickMultiSelectDropDown(String text) {
-        clickWithAction(multiSelectDropDown, 0, 200);
+        clickWithAction(multiSelectDropDown,0,200);
 
         WebElement el = driver.findElement(By.xpath(String.format("//div[text()='%s']", text)));
         el.click();
