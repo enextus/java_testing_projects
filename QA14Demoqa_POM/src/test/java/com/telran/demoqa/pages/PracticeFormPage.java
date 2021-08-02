@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class PracticeFormPage {
+public class PracticeFormPage extends PageBase {
     public PracticeFormPage(WebDriver driver) {
         super(driver);
     }
@@ -24,10 +24,17 @@ public class PracticeFormPage {
     WebElement otherBtn;
 
 
-    public PracticeFormPage selectGender() {
-        if (gender.equals("Male")){
-            maleClick();
+    public PracticeFormPage selectGender(String gender) {
+        if (gender.equals("Male")) {
+            maleBtn.click();
+        } else if (gender.equals("Female")) {
+            femaleBtn.click();
+        } else {
+            otherBtn.click();
         }
 
+        return this;
     }
+
+    
 }

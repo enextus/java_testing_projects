@@ -36,6 +36,18 @@ public class PageBase {
 
     }
 
+    public void typeWithAction(WebElement element, int x, int y, String text) {
+        if (text != null) {
+            clickWithAction(element, x, y);
+            element.clear();
+            element.sendKeys(text);
+        }
+    }
+
+
+
+
+
     public void pause(int millis) {
         try {
             Thread.sleep(millis);
