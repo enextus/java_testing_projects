@@ -1,5 +1,6 @@
 package com.telran.demoqa.pages;
 
+import com.telran.demoqa.pages.bookstore.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
