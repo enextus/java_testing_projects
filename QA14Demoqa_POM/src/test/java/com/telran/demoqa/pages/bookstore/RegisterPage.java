@@ -24,10 +24,10 @@ public class RegisterPage extends PageBase {
 
 
     public RegisterPage fillRegisterForm(String fName, String lName, String uName, String pwd) {
-        type(firstName,fName);
-        type(lastName,lName);
-        type(userName,uName);
-        typeWithAction(password,0,300,pwd);
+        type(firstName, fName);
+        type(lastName, lName);
+        type(userName, uName);
+        typeWithAction(password, 0, 300, pwd);
 
         return this;
     }

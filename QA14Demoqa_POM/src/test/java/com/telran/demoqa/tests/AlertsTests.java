@@ -1,3 +1,4 @@
+
 package com.telran.demoqa.tests;
 
 import com.telran.demoqa.pages.AlertsPage;
@@ -11,16 +12,13 @@ public class AlertsTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-
         new HomePage(driver).goToFrameAlertAndWindowPage();
         new SidePanelPage(driver).selectAlerts();
-
     }
 
     @Test
     public void alertWaitTest() {
         new AlertsPage(driver).clickAlertButton2AndWait();
-
     }
 
     @Test
@@ -29,5 +27,10 @@ public class AlertsTests extends TestBase {
         Assert.assertTrue(new AlertsPage(driver).getConfirmResult().contains("Cancel"));
     }
 
+    @Test
+    public void alertSendTextTest() {
+        new AlertsPage(driver).clickAlertButton4().sendTextToAlert("Hello");
+        Assert.assertTrue(new AlertsPage(driver).getConfirmLastResult().contains("Hello"));
+    }
 
 }
