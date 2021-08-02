@@ -16,11 +16,11 @@ public class BrowserWindowsPage extends PageBase {
     @FindBy(id = "tabButton")
     WebElement newTabBtn;
 
-
     public BrowserWindowsPage clickOnNewTabBtn() {
         newTabBtn.click();
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
+
         return this;
     }
 
@@ -28,6 +28,7 @@ public class BrowserWindowsPage extends PageBase {
     WebElement sampleText;
 
     public String getTextFromNewTab() {
+
         return sampleText.getText();
     }
 
@@ -38,6 +39,7 @@ public class BrowserWindowsPage extends PageBase {
         newWindowsBtn.click();
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
+
         return this;
     }
 
