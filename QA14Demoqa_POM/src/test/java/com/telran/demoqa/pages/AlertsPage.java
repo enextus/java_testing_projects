@@ -43,9 +43,7 @@ public class AlertsPage extends PageBase {
         if (text != null) {
             if (text.equals("Cancel")) {
                 driver.switchTo().alert().dismiss();
-            } else if (text.equals("Ok")) {
-                driver.switchTo().alert().accept();
-            }
+            } else driver.switchTo().alert().accept();
         }
     }
 
@@ -53,7 +51,6 @@ public class AlertsPage extends PageBase {
     WebElement confirmText;
 
     public String getConfirmResult() {
-
         return confirmText.getText();
     }
 
@@ -66,20 +63,18 @@ public class AlertsPage extends PageBase {
         return this;
     }
 
-    public AlertsPage sendTextToAlert(String text) {
-        if (text != null)
+    public void sendTextToAlert(String text) {
+        if (text != null) {
             driver.switchTo().alert().sendKeys(text);
-        System.out.println(driver.switchTo().alert().getText());
-        driver.switchTo().alert().accept();
-
-        return this;
+            System.out.println("Message: " + driver.switchTo().alert().getText());
+            driver.switchTo().alert().accept();
+        }
     }
 
     @FindBy(xpath = "//span[@id='promptResult']")
     WebElement confirmSendText;
 
     public String getConfirmLastResult() {
-
         return confirmSendText.getText();
     }
 
