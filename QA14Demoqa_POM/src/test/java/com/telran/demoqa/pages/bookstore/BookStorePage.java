@@ -1,7 +1,6 @@
 package com.telran.demoqa.pages.bookstore;
 
 import com.telran.demoqa.pages.PageBase;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +15,7 @@ public class BookStorePage extends PageBase {
 
     public LoginPage goToLoginPage() {
         loginBtn.click();
+
         return new LoginPage(driver);
     }
 
@@ -24,6 +24,7 @@ public class BookStorePage extends PageBase {
 
     public BookStorePage typeInSearchFieldInput(String text) {
         type(searchInput,text);
+
         return this;
     }
 
@@ -32,6 +33,7 @@ public class BookStorePage extends PageBase {
 
     public String takeNameOfBook() {
         // pause(500);
+
         return nameOfBook.getText();
     }
 
@@ -39,22 +41,24 @@ public class BookStorePage extends PageBase {
     WebElement firstTitle;
 
     public String verifyEmptyField() {
+
         return firstTitle.getText();
     }
 
     public BookStorePage clickByFirstBook() {
         nameOfBook.click();
+
         return this;
     }
 
     @FindBy(css = ".text-right.fullButton")
     WebElement addToCollectionBtn;
 
-
     public BookStorePage addToYourCollection() {
         clickWithAction(addToCollectionBtn,0,700);
         pause(500);
         driver.switchTo().alert().accept();
+
         return this;
     }
 
@@ -63,6 +67,7 @@ public class BookStorePage extends PageBase {
 
     public ProfilePage clickOnProfileButton() {
         clickWithAction(profileBtn,0,700);
+
         return new ProfilePage(driver);
     }
 

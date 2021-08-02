@@ -4,7 +4,6 @@
 
 package com.telran.demoqa.tests.bookstoretests;
 
-        import com.telran.demoqa.pages.LoginPage;
         import com.telran.demoqa.pages.bookstore.BookStorePage;
         import com.telran.demoqa.pages.HomePage;
         import com.telran.demoqa.tests.TestBase;
