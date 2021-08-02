@@ -22,6 +22,7 @@ public class AlertsPage extends PageBase {
         WebDriverWait wait = new WebDriverWait(driver,5);
         Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
         myAlert.accept();
+
         return this;
     }
 
@@ -30,6 +31,7 @@ public class AlertsPage extends PageBase {
 
     public AlertsPage clickAlertButton3() {
         alertBtn3.click();
+
         return this;
     }
 
@@ -39,6 +41,7 @@ public class AlertsPage extends PageBase {
         }else if (text != null && text.equals("Ok")){
             driver.switchTo().alert().accept();
         }
+
         return this;
     }
 
@@ -46,6 +49,7 @@ public class AlertsPage extends PageBase {
     WebElement confirmText;
 
     public String getConfirmResult() {
+
         return confirmText.getText();
     }
 
@@ -54,15 +58,16 @@ public class AlertsPage extends PageBase {
 
     public AlertsPage clickAlertButton4() {
         alertBtn4.click();
+
         return this;
     }
-
 
     public AlertsPage sendTextToAlert(String text) {
         if (text != null)
             driver.switchTo().alert().sendKeys(text);
         System.out.println(driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
+
         return this;
     }
 
@@ -70,6 +75,7 @@ public class AlertsPage extends PageBase {
     WebElement confirmSendText;
 
     public String getConfirmLastResult() {
+
         return confirmSendText.getText();
     }
 
