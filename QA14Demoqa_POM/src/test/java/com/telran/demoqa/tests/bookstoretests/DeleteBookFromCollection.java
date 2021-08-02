@@ -2,6 +2,7 @@ package com.telran.demoqa.tests.bookstoretests;
 
 import com.telran.demoqa.pages.BookStorePage;
 import com.telran.demoqa.pages.HomePage;
+import com.telran.demoqa.pages.bookstore.LoginPage;
 import com.telran.demoqa.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

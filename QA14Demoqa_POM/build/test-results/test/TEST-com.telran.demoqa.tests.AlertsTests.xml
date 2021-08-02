@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.demoqa.tests.AlertsTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-02T17:37:41" hostname="enextus" time="5.153">
+  <properties/>
+  <testcase name="alertWaitTest" classname="com.telran.demoqa.tests.AlertsTests" time="5.153"/>
+  <system-out><![CDATA[19:37:41 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']
+19:37:41 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']found.
+19:37:41 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Alerts']
+19:37:41 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Alerts']found.
+19:37:41 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: timerAlertButton
+19:37:41 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: timerAlertButtonfound.
+]]></system-out>
+  <system-err><![CDATA[ChromeDriver was started successfully.
+Aug 02, 2021 7:37:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

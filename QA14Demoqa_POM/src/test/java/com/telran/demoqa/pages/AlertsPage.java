@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.Collection;
-
 public class AlertsPage extends PageBase {
     public AlertsPage(WebDriver driver) {
         super(driver);
@@ -19,7 +17,7 @@ public class AlertsPage extends PageBase {
 
     public AlertsPage clickAlertButton2AndWait() {
         alertBtn2.click();
-        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebDriverWait wait = new WebDriverWait(driver, 7);
         Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
         myAlert.accept();
 
