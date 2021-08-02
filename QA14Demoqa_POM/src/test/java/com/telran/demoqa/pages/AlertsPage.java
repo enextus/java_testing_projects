@@ -15,17 +15,14 @@ public class AlertsPage extends PageBase {
     @FindBy(id = "timerAlertButton")
     WebElement alertBtn2;
 
-    public AlertsPage clickAlertButton2AndWait() {
+    public void clickAlertButton2AndWait() {
         alertBtn2.click();
         WebDriverWait wait = new WebDriverWait(driver, 8);
         Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
         String gt = myAlert.getText();
-
         System.out.println("Message: " + gt);
 
         myAlert.accept();
-
-        return this;
     }
 
     @FindBy(id = "confirmButton")
@@ -34,17 +31,22 @@ public class AlertsPage extends PageBase {
     public AlertsPage clickAlertButton3() {
         alertBtn3.click();
 
+        WebDriverWait wait = new WebDriverWait(driver, 1);
+        Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
+        String gt = myAlert.getText();
+        System.out.println("Message: " + gt);
+
         return this;
     }
 
-    public AlertsPage clickOnCancelButton(String text) {
-        if (text != null && text.equals("Cancel")){
-            driver.switchTo().alert().dismiss();
-        }else if (text != null && text.equals("Ok")){
-            driver.switchTo().alert().accept();
+    public void clickOnCancelButton(String text) {
+        if (text != null) {
+            if (text.equals("Cancel")) {
+                driver.switchTo().alert().dismiss();
+            } else if (text.equals("Ok")) {
+                driver.switchTo().alert().accept();
+            }
         }
-
-        return this;
     }
 
     @FindBy(id = "confirmResult")
