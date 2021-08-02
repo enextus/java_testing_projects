@@ -11,7 +11,7 @@ public class HomePage extends PageBase{
         super(driver);
     }
 
-    //#########################################################################################################
+    //### BookStorePage ###############################################################################################
 
     @FindBy(xpath = "//div[@class='category-cards']/div[.='Book Store Application']")
     WebElement bookStoreBtn;
@@ -22,7 +22,7 @@ public class HomePage extends PageBase{
         return new BookStorePage(driver);
     }
 
-    //#########################################################################################################
+    //### SidePanelPage ###############################################################################################
 
     @FindBy(xpath = "//div[@class='category-cards']/div[.='Alerts, Frame & Windows']")
     WebElement alertFrameAndWindowBtn;
