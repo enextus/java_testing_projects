@@ -34,8 +34,8 @@ public class TestBase {
         options.addArguments("--silent");//
         options.setCapability("chrome.verbose", false); //disable logging
 
-        // driver = new EventFiringWebDriver(new ChromeDriver(options));
-        driver = new EventFiringWebDriver(new ChromeDriver());
+        driver = new EventFiringWebDriver(new ChromeDriver(options));
+        // driver = new EventFiringWebDriver(new ChromeDriver());
         driver.register(new MyListener());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

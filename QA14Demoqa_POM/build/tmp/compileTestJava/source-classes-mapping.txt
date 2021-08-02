@@ -1,13 +1,13 @@
-com/telran/demoqa/tests/StudentRegistrationTest.java
- com.telran.demoqa.tests.StudentRegistrationTest
-com/telran/demoqa/pages/bookstore/ProfilePage.java
- com.telran.demoqa.pages.bookstore.ProfilePage
 com/telran/demoqa/tests/bookstoretests/SearchBookTests.java
  com.telran.demoqa.tests.bookstoretests.SearchBookTests
-com/telran/demoqa/pages/ProfilePage.java
- com.telran.demoqa.pages.ProfilePage
+com/telran/demoqa/pages/bookstore/ProfilePage.java
+ com.telran.demoqa.pages.bookstore.ProfilePage
 com/telran/demoqa/tests/LoginPageTests.java
  com.telran.demoqa.tests.LoginPageTests
+com/telran/demoqa/pages/ProfilePage.java
+ com.telran.demoqa.pages.ProfilePage
+com/telran/demoqa/tests/StudentRegistrationTest.java
+ com.telran.demoqa.tests.StudentRegistrationTest
 com/telran/demoqa/pages/BookStorePage.java
  com.telran.demoqa.pages.BookStorePage
 com/telran/demoqa/pages/DragAndDropPage.java

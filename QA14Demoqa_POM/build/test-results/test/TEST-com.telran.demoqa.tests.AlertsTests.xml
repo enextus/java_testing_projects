@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.telran.demoqa.tests.AlertsTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-02T18:28:26" hostname="enextus" time="0.165">
+<testsuite name="com.telran.demoqa.tests.AlertsTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-02T18:36:01" hostname="enextus" time="8.624">
   <properties/>
-  <testcase name="alertSendTextTest" classname="com.telran.demoqa.tests.AlertsTests" time="0.165"/>
-  <system-out><![CDATA[20:28:25 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']
-20:28:25 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']found.
-20:28:26 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Alerts']
-20:28:26 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Alerts']found.
-20:28:26 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: promtButton
-20:28:26 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: promtButtonfound.
+  <testcase name="alertSendTextTest" classname="com.telran.demoqa.tests.AlertsTests" time="0.173"/>
+  <testcase name="alertWaitTest" classname="com.telran.demoqa.tests.AlertsTests" time="5.156"/>
+  <testcase name="cancelAlertTest" classname="com.telran.demoqa.tests.AlertsTests" time="0.118"/>
+  <system-out><![CDATA[20:36:01 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']
+20:36:01 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']found.
+20:36:01 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Alerts']
+20:36:01 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Alerts']found.
+20:36:01 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: promtButton
+20:36:01 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: promtButtonfound.
 Message: Please enter your name
-20:28:26 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[@id='promptResult']
-20:28:26 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[@id='promptResult']found.
+20:36:02 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[@id='promptResult']
+20:36:02 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[@id='promptResult']found.
+20:36:03 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']
+20:36:03 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']found.
+20:36:03 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Alerts']
+20:36:03 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Alerts']found.
+20:36:03 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: timerAlertButton
+20:36:03 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: timerAlertButtonfound.
+Message: This alert appeared after 5 seconds
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //div[@class='category-cards']/div[.='Alerts, Frame & Windows']found.
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Alerts']
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Alerts']found.
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: confirmButton
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: confirmButtonfound.
+Message: Do you confirm action?
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: confirmResult
+20:36:10 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: confirmResultfound.
 ]]></system-out>
   <system-err><![CDATA[ChromeDriver was started successfully.
-Aug 02, 2021 8:28:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Aug 02, 2021 8:36:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ChromeDriver was started successfully.
+Aug 02, 2021 8:36:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ChromeDriver was started successfully.
+Aug 02, 2021 8:36:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
