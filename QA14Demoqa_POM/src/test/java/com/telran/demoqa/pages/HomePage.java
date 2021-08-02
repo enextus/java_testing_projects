@@ -22,7 +22,7 @@ public class HomePage extends PageBase{
         return new BookStorePage(driver);
     }
 
-    //### SidePanelPage ###############################################################################################
+    //### SidePanelPage FrameAlertAndWindowPage #######################################################################
 
     @FindBy(xpath = "//div[@class='category-cards']/div[.='Alerts, Frame & Windows']")
     WebElement alertFrameAndWindowBtn;
@@ -33,7 +33,7 @@ public class HomePage extends PageBase{
         return new SidePanelPage(driver);
     }
 
-    //#########################################################################################################
+    //### SidePanelPage WidgetsPage ###################################################################################
 
     @FindBy(xpath = "//div//h5[.='Widgets']")
     WebElement widgetsBtn;
@@ -44,8 +44,16 @@ public class HomePage extends PageBase{
         return new SidePanelPage(driver);
     }
 
+    //### SidePanelPage Forms #########################################################################################
+
+    @FindBy(xpath = "//div[@class='category-cards']/div[2]")
+    WebElement formsBtn;
+
     public SidePanelPage goToForms() {
-        clickWithAction(formBtn, )
+        clickWithAction(formsBtn,0,300);
+
         return new SidePanelPage(driver);
     }
+
+
 }
