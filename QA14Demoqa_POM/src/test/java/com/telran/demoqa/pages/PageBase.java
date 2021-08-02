@@ -61,19 +61,19 @@ public class PageBase {
                         .nextInt() + ".png"));
     }
 
-
-
-
-
-    public void takeScreenshot(String pathToFiele) {
+    public void takeScreenshot(String pathToFile) {
         File tmp = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        File screenshot = new File(pathToFiele);
+        File screenshot = new File(pathToFile);
+
         try {
             Files.copy(tmp,screenshot);
         }catch (IOException e) {
             e.fillInStackTrace();
         }
+    }
 
+    public void closeBanner() {
+        driver.findElement(By.id("close-fixedban")).click();
     }
 
 }
