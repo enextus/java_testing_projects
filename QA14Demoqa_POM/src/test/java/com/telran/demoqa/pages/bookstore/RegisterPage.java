@@ -28,15 +28,16 @@ public class RegisterPage extends PageBase {
         type(lastName,lName);
         type(userName,uName);
         typeWithAction(password,0,300,pwd);
+
         return this;
     }
 
     @FindBy(id = "g-recaptcha")
     WebElement captcha;
 
-
     public RegisterPage clickCaptcha() {
         captcha.click();
+
         return this;
     }
 
