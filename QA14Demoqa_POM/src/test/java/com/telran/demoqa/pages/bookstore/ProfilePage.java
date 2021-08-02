@@ -24,12 +24,14 @@ public class ProfilePage extends PageBase {
         }else {
             System.out.println("Incorrect user name: " + user.getText());
         }
+
         return this;
     }
 
     public LoginPage logout() {
         System.out.println("Let's out from profile");
         logoutBtn.click();
+
         return new LoginPage(driver);
     }
 
@@ -43,9 +45,11 @@ public class ProfilePage extends PageBase {
 
         booksList.get(0).click();
         pause(500);
+
         okBtn.click();
         pause(500);
         driver.switchTo().alert().accept();
+
         return this;
     }
 

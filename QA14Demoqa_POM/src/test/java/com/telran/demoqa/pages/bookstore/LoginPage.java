@@ -23,6 +23,7 @@ public class LoginPage extends PageBase {
         type(userName,name);
         type(pswd,password);
         clickWithAction(loginBtn,0,300);
+
         return new ProfilePage(driver);
     }
 
@@ -30,6 +31,7 @@ public class LoginPage extends PageBase {
         type(userName,name);
         type(pswd,password);
         clickWithAction(loginBtn,0,300);
+
         return this;
     }
 
@@ -38,6 +40,7 @@ public class LoginPage extends PageBase {
 
     public LoginPage clickOnNewUserButton() {
         newUserBtn.click();
+
         return this;
     }
 
