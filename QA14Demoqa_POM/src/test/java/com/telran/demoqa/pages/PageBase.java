@@ -52,16 +52,18 @@ public class PageBase {
         }
     }
 
-
-
-
     public void takeScreenshotField(WebElement element) throws IOException {
         element.isSelected();
 
         File screenshotEmptyField = element.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshotEmptyField, new File(System
-                .getProperty("user.dir") + "/screenshots/" + new Random().nextInt() + ".png"));
+        FileUtils.copyFile(screenshotEmptyField,
+                new File(System.getProperty("user.dir") + "/screenshots/" + new Random()
+                        .nextInt() + ".png"));
     }
+
+
+
+
 
     public void takeScreenshot(String pathToFiele) {
         File tmp = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
