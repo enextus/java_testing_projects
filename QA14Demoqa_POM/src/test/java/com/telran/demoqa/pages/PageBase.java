@@ -44,17 +44,16 @@ public class PageBase {
         }
     }
 
-
-
-
-
-    public void pause(int millis) {
+    public void pause(int milliseconds) {
         try {
-            Thread.sleep(millis);
+            Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
+
+
 
     public void takeScreenshotField(WebElement element) throws IOException {
         element.isSelected();
