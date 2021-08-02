@@ -12,7 +12,6 @@ public class HomePage extends PageBase{
     }
 
     //### BookStorePage ###############################################################################################
-
     @FindBy(xpath = "//div[@class='category-cards']/div[.='Book Store Application']")
     WebElement bookStoreBtn;
 
@@ -23,7 +22,6 @@ public class HomePage extends PageBase{
     }
 
     //### SidePanelPage FrameAlertAndWindowPage #######################################################################
-
     @FindBy(xpath = "//div[@class='category-cards']/div[.='Alerts, Frame & Windows']")
     WebElement alertFrameAndWindowBtn;
 
@@ -34,7 +32,6 @@ public class HomePage extends PageBase{
     }
 
     //### SidePanelPage WidgetsPage ###################################################################################
-
     @FindBy(xpath = "//div//h5[.='Widgets']")
     WebElement widgetsBtn;
 
@@ -45,7 +42,6 @@ public class HomePage extends PageBase{
     }
 
     //### SidePanelPage Forms #########################################################################################
-
     @FindBy(xpath = "//div[@class='category-cards']/div[2]")
     WebElement formsBtn;
 
@@ -55,5 +51,14 @@ public class HomePage extends PageBase{
         return new SidePanelPage(driver);
     }
 
+    //### SidePanelPage InteractionsPage ##############################################################################
+    @FindBy(xpath = "//h5[.='Interactions']")
+    WebElement interactionsBtn;
+
+    public SidePanelPage goToInteractionsPage() {
+        clickWithAction(interactionsBtn,0,300);
+
+        return new SidePanelPage(driver);
+    }
 
 }
