@@ -41,12 +41,12 @@ public class AlertsPage extends PageBase {
     }
 
     public void clickOnCancelButton(String text) {
-        if (text != null) {
+        if (!Strings.isNullOrEmpty(text)) {
             if (text.equals("Cancel")) {
                 driver.switchTo().alert().dismiss();
             } else driver.switchTo().alert().accept();
         } else {
-            throw new java.lang.RuntimeException("Please pass the text value!");
+            throw new java.lang.RuntimeException("Something bad happened. The text value is empty or null!");
         }
     }
 
@@ -67,16 +67,12 @@ public class AlertsPage extends PageBase {
     }
 
     public void sendTextToAlert(String text) {
-
-        // System.out.println(Strings.isNullOrEmpty(text));
-
         if (!Strings.isNullOrEmpty(text)) {
             driver.switchTo().alert().sendKeys(text);
             System.out.println("Message: " + driver.switchTo().alert().getText());
             driver.switchTo().alert().accept();
         } else {
             throw new java.lang.RuntimeException("Something bad happened. The text value is empty or null!");
-            // throw new java.lang.Error("Something bad happened. The text value is empty or null!");
         }
     }
 
