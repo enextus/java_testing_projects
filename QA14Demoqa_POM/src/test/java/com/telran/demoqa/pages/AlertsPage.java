@@ -1,5 +1,6 @@
 package com.telran.demoqa.pages;
 
+import com.google.common.base.Strings;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,6 +45,8 @@ public class AlertsPage extends PageBase {
             if (text.equals("Cancel")) {
                 driver.switchTo().alert().dismiss();
             } else driver.switchTo().alert().accept();
+        } else {
+            throw new java.lang.RuntimeException("Please pass the text value!");
         }
     }
 
@@ -64,10 +67,16 @@ public class AlertsPage extends PageBase {
     }
 
     public void sendTextToAlert(String text) {
-        if (text != null) {
+
+        // System.out.println(Strings.isNullOrEmpty(text));
+
+        if (!Strings.isNullOrEmpty(text)) {
             driver.switchTo().alert().sendKeys(text);
             System.out.println("Message: " + driver.switchTo().alert().getText());
             driver.switchTo().alert().accept();
+        } else {
+            throw new java.lang.RuntimeException("Something bad happened. The text value is empty or null!");
+            // throw new java.lang.Error("Something bad happened. The text value is empty or null!");
         }
     }
 

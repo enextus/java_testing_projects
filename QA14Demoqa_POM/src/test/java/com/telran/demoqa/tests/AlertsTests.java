@@ -1,4 +1,3 @@
-
 package com.telran.demoqa.tests;
 
 import com.telran.demoqa.pages.AlertsPage;
