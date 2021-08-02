@@ -17,8 +17,12 @@ public class AlertsPage extends PageBase {
 
     public AlertsPage clickAlertButton2AndWait() {
         alertBtn2.click();
-        WebDriverWait wait = new WebDriverWait(driver, 7);
+        WebDriverWait wait = new WebDriverWait(driver, 8);
         Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
+        String gt = myAlert.getText();
+
+        System.out.println("Message: " + gt);
+
         myAlert.accept();
 
         return this;
