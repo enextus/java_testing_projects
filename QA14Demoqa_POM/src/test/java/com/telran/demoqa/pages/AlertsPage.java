@@ -83,4 +83,5 @@ public class AlertsPage extends PageBase {
         return confirmSendText.getText();
     }
 
+
 }
