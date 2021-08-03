@@ -69,8 +69,9 @@ public class SidePanelPage extends PageBase{
     WebElement textBoxBtn;
 
     public ElementsPage selectTextBox() {
-        textBoxBtn
+        textBoxBtn.click();
         return new ElementsPage(driver);
     }
+
 
 }

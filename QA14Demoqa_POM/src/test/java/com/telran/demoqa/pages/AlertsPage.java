@@ -88,4 +88,5 @@ public class AlertsPage extends PageBase {
 
         return this;
     }
+
 }

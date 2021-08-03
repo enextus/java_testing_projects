@@ -26,4 +26,5 @@ public class JSExecutorTests extends TestBase {
                 .getURLPageJSE().scrollWithJSE();
 
     }
+
 }
