@@ -53,7 +53,33 @@ public class JSExecutor extends PageBase {
     }
 
     public JSExecutor refreshBrowserJSE() {
+        // to refresh of the Page
         js.executeScript("history.go(0);");
+        return this;
+    }
+
+    public JSExecutor getTitlePageJSE() {
+        // to get Title of our webpage
+        String text = js.executeScript("return documnet.title;").toString();
+        System.out.println("******************" + "\n" + text);
+
+        return this;
+    }
+
+    public JSExecutor getURLPageJSE() {
+        // to get URL
+        String url = js.executeScript("return document.URL").toString();
+        System.out.println("URL -> " + url);
+
+        return this;
+    }
+
+    public JSExecutor scrollWithJSE() {
+        // to perform Scroll
+        // vertical scroll down by 50px
+        js.executeScript("window.scrollBy(0,50);");
+
+
         return this;
     }
 }

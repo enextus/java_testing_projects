@@ -1,6 +1,7 @@
 package com.telran.demoqa.tests;
 
 import com.telran.demoqa.helpers.JSExecutor;
+import com.telran.demoqa.pages.AlertsPage;
 import com.telran.demoqa.pages.HomePage;
 import com.telran.demoqa.pages.SidePanelPage;
 import org.testng.annotations.Test;
@@ -20,7 +21,9 @@ public class JSExecutorTests extends TestBase {
         new HomePage(driver).goToForms();
         new SidePanelPage(driver).selectPracticeForm();
         new JSExecutor(driver).checkBoxJSE().alertWithJSE();
-        new
+        new AlertsPage(driver).acceptAlert();
+        new JSExecutor(driver).refreshBrowserJSE().getTitlePageJSE()
+                .getURLPageJSE().scrollWithJSE();
 
     }
 }

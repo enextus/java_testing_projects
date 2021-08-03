@@ -83,5 +83,9 @@ public class AlertsPage extends PageBase {
         return confirmSendText.getText();
     }
 
+    public AlertsPage acceptAlert() {
+        driver.switchTo().alert().accept();
 
+        return this;
+    }
 }
