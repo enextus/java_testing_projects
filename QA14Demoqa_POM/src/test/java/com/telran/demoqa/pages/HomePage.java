@@ -61,4 +61,11 @@ public class HomePage extends PageBase{
         return new SidePanelPage(driver);
     }
 
+    @FindBy(xpath = "//div//h5[.='Elements']")
+    WebElement elementsBtn;
+
+    public SidePanelPage gotoElementsPage() {
+        clickWithAction(element, )
+    }
+
 }

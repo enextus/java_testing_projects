@@ -65,4 +65,12 @@ public class SidePanelPage extends PageBase{
         return new DragAndDropPage(driver);
     }
 
+    @FindBy(xpath = "//span[.='Text Box']")
+    WebElement textBoxBtn;
+
+    public ElementsPage selectTextBox() {
+        textBoxBtn
+        return new ElementsPage(driver);
+    }
+
 }
