@@ -74,4 +74,6 @@ public class SidePanelPage extends PageBase{
     }
 
 
+    public void selectLinks() {
+    }
 }
