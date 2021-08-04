@@ -18,6 +18,8 @@ com/telran/demoqa/pages/BookStorePage.java
  com.telran.demoqa.pages.BookStorePage
 com/telran/demoqa/pages/DragAndDropPage.java
  com.telran.demoqa.pages.DragAndDropPage
+com/telran/demoqa/tests/SelectMenuTests.java
+ com.telran.demoqa.tests.SelectMenuTests
 com/telran/demoqa/pages/PageBase.java
  com.telran.demoqa.pages.PageBase
 com/telran/demoqa/pages/PracticeFormPage.java
@@ -26,8 +28,12 @@ com/telran/demoqa/pages/BrokenLinksAndImagesPage.java
  com.telran.demoqa.pages.BrokenLinksAndImagesPage
 com/telran/demoqa/pages/bookstore/BookStorePage.java
  com.telran.demoqa.pages.bookstore.BookStorePage
+com/telran/demoqa/tests/JSExecutorTests.java
+ com.telran.demoqa.tests.JSExecutorTests
 com/telran/demoqa/tests/TestBase.java
  com.telran.demoqa.tests.TestBase
+com/telran/demoqa/tests/LoginPageTests.java
+ com.telran.demoqa.tests.LoginPageTests
 com/telran/demoqa/pages/BrowserWindowsPage.java
  com.telran.demoqa.pages.BrowserWindowsPage
 com/telran/demoqa/helpers/MyListener.java
@@ -52,3 +58,5 @@ com/telran/demoqa/pages/bookstore/LoginPage.java
  com.telran.demoqa.pages.bookstore.LoginPage
 com/telran/demoqa/tests/StudentRegistrationTest.java
  com.telran.demoqa.tests.StudentRegistrationTest
+com/telran/demoqa/tests/DragAndDropTests.java
+ com.telran.demoqa.tests.DragAndDropTests

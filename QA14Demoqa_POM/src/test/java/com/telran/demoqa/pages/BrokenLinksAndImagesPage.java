@@ -51,13 +51,16 @@ public class BrokenLinksAndImagesPage extends PageBase {
                     .build();
 
             Response response = client.newCall(request).execute();
+
+
             if (response.isSuccessful()) {
                 System.out.println(linkURL + " - " + response.code() + " " + response.message());
-                System.out.println("**********************************************************");
             } else {
                 System.out.println(linkURL + " - " + response.code() + " " + " is a broken link");
-                System.out.println("**********************************************************");
             }
+            System.out.println("**********************************************************");
+
+
         } catch (Exception e) {
             System.out.println(linkURL + " - " + e.getMessage() + " is a broken link");
             System.out.println("***************************************************************");
