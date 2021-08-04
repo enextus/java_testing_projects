@@ -58,6 +58,4 @@ public class HomePage extends PageBase{
         return new SidePanelPage(driver);
     }
 
-    public void gotoElementsPage() {
-    }
 }
