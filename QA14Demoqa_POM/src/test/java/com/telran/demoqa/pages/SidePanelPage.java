@@ -3,6 +3,7 @@ package com.telran.demoqa.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.BeforeMethod;
 
 public class SidePanelPage extends PageBase{
     public SidePanelPage(WebDriver driver) {
@@ -10,12 +11,10 @@ public class SidePanelPage extends PageBase{
     }
 
     @FindBy(xpath = "//span[.='Browser Windows']")
-    // @FindBy(xpath = "//span[contains(text(),'Browser Windows')]")
     WebElement browserWindowsBtn;
 
     public BrowserWindowsPage selectBrowserWindows() {
-        clickWithAction(browserWindowsBtn, 0, 300);
-
+        clickWithAction(browserWindowsBtn,0,300);
         return new BrowserWindowsPage(driver);
     }
 
@@ -23,18 +22,15 @@ public class SidePanelPage extends PageBase{
     WebElement alertsBtn;
 
     public AlertsPage selectAlerts() {
-        clickWithAction(alertsBtn, 0, 300);
-
+        clickWithAction(alertsBtn,0,300);
         return new AlertsPage(driver);
     }
 
     @FindBy(xpath = "//span[.='Select Menu']")
-    // @FindBy(xpath = "//span[contains(text(),'Select Menu')]")
     WebElement selectMenuBtn;
 
     public SelectMenuPage selectSelectMenuBtn() {
-        clickWithAction(selectMenuBtn, 0, 700);
-
+        clickWithAction(selectMenuBtn,0,700);
         return new SelectMenuPage(driver);
     }
 
@@ -42,8 +38,7 @@ public class SidePanelPage extends PageBase{
     WebElement practiceFormBtn;
 
     public PracticeFormPage selectPracticeForm() {
-        clickWithAction(practiceFormBtn, 0, 500);
-
+        clickWithAction(practiceFormBtn,0,500);
         return new PracticeFormPage(driver);
     }
 
@@ -51,8 +46,7 @@ public class SidePanelPage extends PageBase{
     WebElement datePickerBtn;
 
     public DatePickerPage selectDatePicker() {
-        clickWithAction(datePickerBtn, 0, 300);
-
+        clickWithAction(datePickerBtn,0,300);
         return new DatePickerPage(driver);
     }
 
@@ -60,8 +54,7 @@ public class SidePanelPage extends PageBase{
     WebElement droppableBtn;
 
     public DragAndDropPage selectDroppable() {
-        clickWithAction(droppableBtn, 0, 300);
-
+        clickWithAction(droppableBtn,0,300);
         return new DragAndDropPage(driver);
     }
 
@@ -73,7 +66,20 @@ public class SidePanelPage extends PageBase{
         return new ElementsPage(driver);
     }
 
+    @FindBy(xpath = "//span[.='Links']")
+    WebElement linksBtn;
 
-    public void selectLinks() {
+    public BrokenLinksAndImagesPage selectLinks() {
+        clickWithAction(linksBtn,0,300);
+        return new BrokenLinksAndImagesPage(driver);
     }
+
+    @FindBy(xpath = "//span[.='Broken Links - Images']")
+    WebElement imagesBtn;
+
+    public BrokenLinksAndImagesPage selectBrokenImages() {
+        clickWithAction(imagesBtn,0,300);
+        return new BrokenLinksAndImagesPage(driver);
+    }
+
 }
