@@ -1,74 +1,95 @@
 package com.telran.demoqa.pages;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 
 public class BrokenLinksAndImagesPage extends PageBase {
-
     public BrokenLinksAndImagesPage(WebDriver driver) {
-
         super(driver);
     }
 
     @FindBy(tagName = "a")
     List<WebElement> allLinks;
 
-    public BrokenLinksAndImagesPage checkAllURL() {
+    public BrokenLinksAndImagesPage checkAllUrl() {
 
         String url = "";
         System.out.println("Total links on the Page: " + allLinks.size());
 
         Iterator<WebElement> iterator = allLinks.iterator();
-
         while (iterator.hasNext()) {
             url = iterator.next().getText();
             System.out.println(url);
         }
-
         return this;
     }
 
-    public BrokenLinksAndImagesPage checkBrokenLinks() throws IOException {
-
+    public BrokenLinksAndImagesPage checkBrokenLinks() {
         for (int i = 0; i < allLinks.size(); i++) {
             WebElement element = allLinks.get(i);
-
             String url = element.getAttribute("href");
-
             verifyLinks(url);
-
         }
-
         return this;
     }
 
     private void verifyLinks(String linkURL) {
-
+        OkHttpClient client = new OkHttpClient();
         try {
-            URL url = new URL(linkURL);
+            Request request = new Request.Builder()
+                    .url(linkURL)
+                    .build();
 
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setConnectTimeout(5000);
-            connection.connect();
-
-            if (connection.getResponseCode() >= 400) {
-                System.out.println(linkURL + " - " + connection.getResponseMessage() + " is broken link");
-
+            Response response = client.newCall(request).execute();
+            if (response.isSuccessful()) {
+                System.out.println(linkURL + " - " + response.code() + " " + response.message());
+                System.out.println("**********************************************************");
             } else {
-                System.out.println(linkURL + " - " + connection.getResponseMessage());
-
+                System.out.println(linkURL + " - " + response.code() + " " + " is a broken link");
+                System.out.println("**********************************************************");
             }
         } catch (Exception e) {
-            System.out.println(linkURL + " - " + e.getMessage() + " - is a broken link");
+            System.out.println(linkURL + " - " + e.getMessage() + " is a broken link");
+            System.out.println("***************************************************************");
         }
-
     }
 
+    @FindBy(tagName = "img")
+    List<WebElement> images;
+
+    public BrokenLinksAndImagesPage checkBrokenImages() {
+        System.out.println("We have " + images.size() + " images");
+
+        for (int index = 0; index < images.size(); index++) {
+            WebElement image = images.get(index);
+            String imageURL = image.getAttribute("src");
+            System.out.println("URL of Image " + (index + 1) + " is: " + imageURL);
+            verifyLinks(imageURL);
+
+            try {
+                boolean imageDisplayed = (Boolean) ((JavascriptExecutor) driver)
+                        .executeScript("return (typeof arguments[0].naturalWidth !=undefined && arguments[0].naturalWidth > 0);", image);
+                if (imageDisplayed) {
+                    System.out.println("DISPLAY - OK");
+                    System.out.println("***************************");
+                } else {
+                    System.out.println("DISPLAY - BROKEN");
+                    System.out.println("**************************");
+                }
+            } catch (Exception e) {
+                System.out.println("ERROR");
+            }
+        }
+        return this;
+    }
 }
