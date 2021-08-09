@@ -8,8 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 
@@ -81,7 +79,7 @@ public class BrokenLinksAndImagesPage extends PageBase {
 
             try {
                 boolean imageDisplayed = (Boolean) ((JavascriptExecutor) driver)
-                        .executeScript("return (typeof arguments[0].naturalWidth !=undefined && arguments[0].naturalWidth > 0);", image);
+                        .executeScript("return (typeof arguments[0].naturalWidth !='undefined' && arguments[0].naturalWidth > 0);", image);
                 if (imageDisplayed) {
                     System.out.println("DISPLAY - OK");
                     System.out.println("***************************");
@@ -92,7 +90,10 @@ public class BrokenLinksAndImagesPage extends PageBase {
             } catch (Exception e) {
                 System.out.println("ERROR");
             }
+
         }
+
         return this;
     }
+
 }
