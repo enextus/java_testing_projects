@@ -43,10 +43,10 @@ public class HomePage extends PageBase{
     }
 
     @FindBy(xpath = "//h5[.='Interactions']")
-    WebElement inteactionsBtn;
+    WebElement interactionsBtn;
 
     public SidePanelPage goToInteractionsPage() {
-        clickWithAction(inteactionsBtn,0,300);
+        clickWithAction(interactionsBtn, 0, 300);
         return new SidePanelPage(driver);
     }
 
