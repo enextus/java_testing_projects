@@ -1,119 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.telran.demoqa.tests.DragAndDropTests" tests="2" skipped="1" failures="1" errors="0" timestamp="2021-08-04T07:01:02" hostname="enextus" time="1.463">
+<testsuite name="com.telran.demoqa.tests.DragAndDropTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-09T21:13:22" hostname="enextus" time="6.841">
   <properties/>
-  <testcase name="ensurePreconditions" classname="com.telran.demoqa.tests.DragAndDropTests" time="1.462">
-    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;text&quot;&gt;...&lt;/span&gt; is not clickable at point (98, 683). Other element would receive the click: &lt;iframe id=&quot;google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0&quot; title=&quot;3rd party ad content&quot; name=&quot;google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0&quot; width=&quot;970&quot; height=&quot;100&quot; scrolling=&quot;no&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; allow=&quot;attribution-reporting&quot; srcdoc=&quot;&quot; style=&quot;border: 0px; vertical-align: bottom;&quot; data-google-container-id=&quot;1&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;&#10;  (Session info: headless chrome=92.0.4515.107)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'enextus', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-78-generic', java.version: '11.0.11'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /tmp/.org.chromium.Chromium...}, goog:chromeOptions: {debuggerAddress: localhost:34909}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 91ff06db57ea6d07eee7d6ca1e1bbd4e" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;text&quot;&gt;...&lt;/span&gt; is not clickable at point (98, 683). Other element would receive the click: &lt;iframe id=&quot;google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0&quot; title=&quot;3rd party ad content&quot; name=&quot;google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0&quot; width=&quot;970&quot; height=&quot;100&quot; scrolling=&quot;no&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation&quot; allow=&quot;attribution-reporting&quot; srcdoc=&quot;&quot; style=&quot;border: 0px; vertical-align: bottom;&quot; data-google-container-id=&quot;1&quot; data-load-complete=&quot;true&quot;&gt;&lt;/iframe&gt;
-  (Session info: headless chrome=92.0.4515.107)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'enextus', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-78-generic', java.version: '11.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /tmp/.org.chromium.Chromium...}, goog:chromeOptions: {debuggerAddress: localhost:34909}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 91ff06db57ea6d07eee7d6ca1e1bbd4e
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
-	at com.sun.proxy.$Proxy17.click(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy16.click(Unknown Source)
-	at com.telran.demoqa.pages.PageBase.clickWithAction(PageBase.java:32)
-	at com.telran.demoqa.pages.SidePanelPage.selectDroppable(SidePanelPage.java:57)
-	at com.telran.demoqa.tests.DragAndDropTests.ensurePreconditions(DragAndDropTests.java:14)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-</failure>
-  </testcase>
-  <testcase name="dropabbleTest1" classname="com.telran.demoqa.tests.DragAndDropTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[09:01:02 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //h5[.='Interactions']
-09:01:02 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //h5[.='Interactions']found.
-09:01:02 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Droppable']
-09:01:02 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Droppable']found.
-09:01:03 [Test worker] ERROR com.telran.demoqa.helpers.MyListener - org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="text">...</span> is not clickable at point (98, 683). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="attribution-reporting" srcdoc="" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true"></iframe>
-  (Session info: headless chrome=92.0.4515.107)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'enextus', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-78-generic', java.version: '11.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: /tmp/.org.chromium.Chromium...}, goog:chromeOptions: {debuggerAddress: localhost:34909}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 91ff06db57ea6d07eee7d6ca1e1bbd4e
-09:01:03 [Test worker] ERROR com.telran.demoqa.helpers.MyListener - screenshots/screen-63.png
+  <testcase name="dropabbleTest1" classname="com.telran.demoqa.tests.DragAndDropTests" time="1.56"/>
+  <testcase name="droppableTest" classname="com.telran.demoqa.tests.DragAndDropTests" time="2.322"/>
+  <system-out><![CDATA[23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //h5[.='Interactions']
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //h5[.='Interactions']found.
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Droppable']
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Droppable']found.
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: draggable
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: draggablefound.
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: draggable
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: draggablefound.
+xOffset1--->713 yOffset1 --302
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: droppable
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: droppablefound.
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: droppable
+23:13:22 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: droppablefound.
+xOffset1--->1041 yOffset1 --294
+23:13:23 [Forwarding actions on session 825df6945ce5c5da9ab1f3ed01a9aeca to remote] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: draggable
+23:13:23 [Forwarding actions on session 825df6945ce5c5da9ab1f3ed01a9aeca to remote] INFO  com.telran.demoqa.helpers.MyListener - By.id: draggablefound.
+23:13:24 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: droppable
+23:13:24 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: droppablefound.
+PASS: Source is dropped to target as expected
+23:13:27 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //h5[.='Interactions']
+23:13:27 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //h5[.='Interactions']found.
+23:13:27 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.xpath: //span[.='Droppable']
+23:13:27 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.xpath: //span[.='Droppable']found.
+23:13:29 [Forwarding actions on session 018bd584e17088e151b27ef6a23ce44f to remote] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: draggable
+23:13:29 [Forwarding actions on session 018bd584e17088e151b27ef6a23ce44f to remote] INFO  com.telran.demoqa.helpers.MyListener - By.id: draggablefound.
+23:13:29 [Forwarding actions on session 018bd584e17088e151b27ef6a23ce44f to remote] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: droppable
+23:13:29 [Forwarding actions on session 018bd584e17088e151b27ef6a23ce44f to remote] INFO  com.telran.demoqa.helpers.MyListener - By.id: droppablefound.
+23:13:29 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - Start search By.id: droppable
+23:13:29 [Test worker] INFO  com.telran.demoqa.helpers.MyListener - By.id: droppablefound.
+PASS: Source is dropped to target as expected
 ]]></system-out>
   <system-err><![CDATA[ChromeDriver was started successfully.
-Aug 04, 2021 9:01:01 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Aug 09, 2021 11:13:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ChromeDriver was started successfully.
+Aug 09, 2021 11:13:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

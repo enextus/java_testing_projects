@@ -12,7 +12,7 @@ public class JSExecutorTests extends TestBase {
     public void executorTest() {
         new HomePage(driver).goToElementsPage();
         new SidePanelPage(driver).selectTextBox();
-        new JSExecutor(driver).typeDataWithExecutor("aaaa", "aaaa@gmail.com")
+        new JSExecutor(driver).typeDataWithExecutor("aaaa22", "aaaa@gmail.com")
                 .clickOnSubmitJSE();
     }
 

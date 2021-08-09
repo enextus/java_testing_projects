@@ -35,10 +35,10 @@ public class TestBase {
         options.setCapability("chrome.verbose", false); //disable logging
 
         // With options
-        driver = new EventFiringWebDriver(new ChromeDriver(options));
+        // driver = new EventFiringWebDriver(new ChromeDriver(options));
 
         // Without options
-        //driver = new EventFiringWebDriver(new ChromeDriver());
+        driver = new EventFiringWebDriver(new ChromeDriver());
 
         driver.register(new MyListener());
         driver.manage().window().maximize();

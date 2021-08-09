@@ -20,7 +20,7 @@ public class DragAndDropTests extends TestBase {
     }
 
     @Test
-    public void dropabbleTest1() {
+    public void droppableTest1() {
         new DragAndDropPage(driver).dragAndDropBy();
     }
 
