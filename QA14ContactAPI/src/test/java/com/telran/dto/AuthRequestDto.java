@@ -9,7 +9,6 @@ import lombok.*;
 @Builder
 @ToString
 public class AuthRequestDto {
-    String login;
-    String name;
-
+    String email;
+    String password;
 }

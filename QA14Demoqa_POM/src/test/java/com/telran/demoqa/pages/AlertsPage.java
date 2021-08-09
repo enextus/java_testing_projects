@@ -36,7 +36,6 @@ public class AlertsPage extends PageBase {
         Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
         String gt = myAlert.getText();
         System.out.println("Message: " + gt);
-
         return this;
     }
 
@@ -62,7 +61,6 @@ public class AlertsPage extends PageBase {
 
     public AlertsPage clickAlertButton4() {
         alertBtn4.click();
-
         return this;
     }
 
@@ -85,7 +83,6 @@ public class AlertsPage extends PageBase {
 
     public AlertsPage acceptAlert() {
         driver.switchTo().alert().accept();
-
         return this;
     }
 
