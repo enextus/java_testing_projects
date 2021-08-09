@@ -1,9 +1,10 @@
 package com.telran.demoqa.tests.bookstoretests;
 
-import com.telran.demoqa.pages.BookStorePage;
+import com.telran.demoqa.pages.bookstore.BookStorePage;
 import com.telran.demoqa.pages.HomePage;
 import com.telran.demoqa.pages.bookstore.LoginPage;
 import com.telran.demoqa.tests.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,5 +25,7 @@ public class DeleteBookFromCollection extends TestBase {
         new BookStorePage(driver).typeInSearchFieldInput(text).clickByFirstBook()
                 .addToYourCollection().clickOnProfileButton()
                 .clickOnTrashToDeleteBook();
+        Assert.assertTrue(new BookStorePage(driver).verifyEmptyField().contains(""));
     }
+
 }

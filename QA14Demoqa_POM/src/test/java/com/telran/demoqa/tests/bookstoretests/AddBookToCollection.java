@@ -1,7 +1,3 @@
-
-
-
-
 package com.telran.demoqa.tests.bookstoretests;
 
         import com.telran.demoqa.pages.bookstore.BookStorePage;
@@ -31,4 +27,5 @@ public class AddBookToCollection extends TestBase {
 
         Assert.assertTrue(new BookStorePage(driver).takeNameOfBook().contains(text));
     }
+
 }
