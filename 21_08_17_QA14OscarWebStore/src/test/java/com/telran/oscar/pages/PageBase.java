@@ -4,6 +4,7 @@ import com.google.common.io.Files;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
@@ -74,6 +75,11 @@ public class PageBase {
 
     public void closeBanner() {
         driver.findElement(By.id("close-fixedban")).click();
+    }
+
+    public void selectDropDownByValue(WebElement element,String value) {
+        Select select = new Select(element);
+        select.selectByValue(value);
     }
 
 }
