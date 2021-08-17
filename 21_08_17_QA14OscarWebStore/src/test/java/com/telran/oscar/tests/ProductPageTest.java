@@ -1,4 +1,7 @@
 package com.telran.oscar.tests;
 
-public class ProductPageTest {
+import com.telran.oscar.pages.PageBase;
+
+public class ProductPageTest extends PageBase {
+
 }
