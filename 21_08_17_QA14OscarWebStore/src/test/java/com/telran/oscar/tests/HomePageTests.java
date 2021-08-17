@@ -14,4 +14,7 @@ public class HomePageTests extends TestBase {
         productPage = PageFactory.initElements(driver, ProductPage.class);
     }
 
+    @Test
+    public void user
+
 }
