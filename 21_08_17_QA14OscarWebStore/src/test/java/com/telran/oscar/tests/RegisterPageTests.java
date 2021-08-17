@@ -1,4 +1,4 @@
 package com.telran.oscar.tests;
 
-public class RegisterPageTests {
+public class RegisterPageTests extends TestBase {
 }
