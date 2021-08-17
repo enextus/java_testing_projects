@@ -1,6 +1,5 @@
 package com.telran.oscar.pages;
 
-
 import com.google.common.io.Files;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
