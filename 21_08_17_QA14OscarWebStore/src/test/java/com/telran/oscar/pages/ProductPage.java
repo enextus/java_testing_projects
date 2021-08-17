@@ -15,4 +15,5 @@ public class ProductPage extends PageBase {
     public boolean isItProductPage() {
         return pageHeader.isDisplayed();
     }
+
 }

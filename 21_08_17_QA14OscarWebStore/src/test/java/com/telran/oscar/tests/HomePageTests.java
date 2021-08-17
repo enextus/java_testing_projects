@@ -1,6 +1,5 @@
 package com.telran.oscar.tests;
 
-import com.telran.oscar.pages.TestBase;
 import org.testng.annotations.BeforeMethod;
 
 public class HomePageTests extends TestBase {

@@ -1,4 +1,4 @@
-package com.telran.oscar.pages;
+package com.telran.oscar.tests;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
