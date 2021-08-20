@@ -19,4 +19,8 @@ public class HomePage extends PageBase {
         return new ProductPage(driver);
     }
 
+/*    @FindBy(id = "login_link")
+    WebElement loginLink;
+
+    public RegisterPage*/
 }
