@@ -1,6 +1,8 @@
 package com.telran.oscar.tests;
 
 import com.telran.oscar.pages.HomePage;
+import com.telran.oscar.pages.RegisterPage;
+import com.telran.oscar.utils.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
