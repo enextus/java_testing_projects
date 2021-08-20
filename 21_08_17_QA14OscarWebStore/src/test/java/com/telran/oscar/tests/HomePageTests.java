@@ -15,8 +15,9 @@ public class HomePageTests extends TestBase {
     @BeforeMethod
     public void pageInit() {
 
+        System.out.println("_____________**********_____________");
         System.out.println(HomePage.class.getFields());
-        System.out.println("_____________**********______");
+        System.out.println("_____________**********_____________");
 
         homePage = PageFactory.initElements(driver, HomePage.class);
         productPage = PageFactory.initElements(driver, ProductPage.class);
