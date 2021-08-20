@@ -22,7 +22,7 @@ public class RegisterPageTests extends TestBase {
 
     @Test(priority = 1, groups = {"functional"})
     public void newUserRegistrationPositiveTest() {
-        new RegisterPage(driver).fillRegisterForm("dra@gm.cm", "Draft1234!", "Draft1234!");
+        new RegisterPage(driver).fillRegisterForm("dra4@gm.cm", "Draft1234!", "Draft1234!");
 
     }
 
