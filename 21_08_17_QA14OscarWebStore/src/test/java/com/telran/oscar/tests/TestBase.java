@@ -37,8 +37,18 @@ public class TestBase {
     }
 
     @AfterMethod(enabled = true)
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
         driver.quit();
+
+        if (result.isSuccess()) {
+            logger.info("Test result: PASSED");
+        } else {
+            logger.error("Test result: FAILED");
+        }
+        logger.info("Stop test: " + result.getTestName());
+        logger.info("**********************************************");
+
+
     }
 
 }
