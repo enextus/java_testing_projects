@@ -34,6 +34,7 @@ public class PageBase {
 //        Actions actions = new Actions(driver);
 //        actions.moveToElement(element).moveByOffset(x, y).click().build().perform();
 
+
     }
 
     public void typeWithAction(WebElement element, int x, int y, String text) {
