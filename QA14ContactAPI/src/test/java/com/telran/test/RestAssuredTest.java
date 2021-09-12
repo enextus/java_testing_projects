@@ -35,6 +35,7 @@ public class RestAssuredTest {
         System.out.println(responceDto.getToken());
     }
 
+
     @Test
     public void loginNegativeTest() {
         AuthRequestDto requestDto = AuthRequestDto.builder()
